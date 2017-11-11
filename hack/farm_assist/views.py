@@ -27,9 +27,9 @@ def login_site(request):
 		user = authenticate(username = email, password = password)
 		if user:
 			login(request, user)
-			return HttpResponse('login')
+			return redirect('/farmer_homepage/')
 		else:
-			return render(request, 'login.html')
+			return redirect('/register/')
 
 	else:	
 		return render(request, 'login.html')
@@ -53,7 +53,7 @@ def register(request):
 	
 
 
-		user=User.objects.create(username=email)
+		user=User.objects.create(username=email,password=password)
 		user.set_password(password)
 		user.save()
 
@@ -62,6 +62,27 @@ def register(request):
 
 	
       
-		return HttpResponse('Check your mail box to confirm')
+		return Redirect('/login/')
 	else:
 		return render(request,'reg_form.html')
+
+
+def farmer_homepage(request):
+	if request.user.is_authenticated():
+		return render(request,'hospitalHome.html')
+	else:
+		return redirect('/login/')
+
+
+def seeds(request):
+	if request.user.is_authenticated():
+		return render(request,'seeds.html')
+	else:
+		return redirect('/login/')
+
+
+def fertilizer(request):
+	if request.user.is_authenticated():
+		return render(request,'fert.html')
+	else:
+		return redirect('/login/')

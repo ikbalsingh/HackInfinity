@@ -12,7 +12,7 @@ from django.conf import settings
 class farmer(models.Model):
 	name = models.CharField(max_length=100)
 	number = models.CharField(max_length=100)
-	email = models.CharField(max_length=100)
+	email = models.CharField(max_length=100,unique=True)
 	street = models.CharField(max_length=100)
 	location = models.CharField(max_length=100)
 	city = models.CharField(max_length=100)
