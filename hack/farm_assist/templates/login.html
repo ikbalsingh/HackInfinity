@@ -145,10 +145,10 @@ body {
    
     <form class="login-form" action="/login/" method="POST">
     {% csrf_token %}
-      <input type="email" placeholder="email" name="email"/>
+      <input type="text" placeholder="email" name="email"/>
       <input type="password" placeholder="password" name="password"/>
 <button type="submit">Login</button>     
- <p class="message">Not registered? <a href="/hos_reg/">Create an account</a></p>
+ <p class="message">Not registered? <a href="/register/">Create an account</a></p>
     </form>
   </div>
 </div>
