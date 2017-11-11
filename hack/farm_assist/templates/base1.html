@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Shipeasy </title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'login/bootstrap/css/bootstrap.min.css' %}">
+        <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'login/css/blog.css' %}">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src = "{% static 'login/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'login/js/blog.js' %}"></script>
+    </head>
+    <body>
+    
+        
+
+<!--
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">-->
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <!--<div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/posts">Shipeasy</a>
+            </div>  -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+              </ul>
+              
+          -->
+            <!--</div>
+          </div>
+        </nav>-->
+        <div class="container">
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

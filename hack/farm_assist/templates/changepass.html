@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/form1.css' %}" type="text/css"></head>
+{% load static %}
+<body>
+	<div class="login-page">
+	<div class="form">
+   <form method="POST" action="/{{user.password}}/changepass/" class="reset-form" enctype="multipart/form-data">
+
+{% csrf_token %}
+	<input type="password" name="upass" placeholder="New Password">
+	<input type="password" name="upass1" placeholder="Confirm New Password">
+	
+	<button type="submit">Submit</button>
+</form>
+</div>
+</div>
+</body>
+</html>

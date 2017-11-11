@@ -1,0 +1,5817 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+/*
+01. Theme Typo
+02. Header
+	02.1 Top Strip
+		02.1.1 Top Info
+		02.1.2 Search
+	02.1 Logo
+	02.2 Navigation
+		02.2.1 SubMenu
+		02.2.1 MegaMenu
+03. Content
+
+	03.1 Blog
+		03.1.2 Blog Grid
+		03.1.3 Blog Large
+		03.1.4 Blog Detail
+ 
+	03.3 Default Pages Style
+		03.3.1 404
+		03.3.2 Services
+		03.3.3 No Search Result
+		03.3.4 Contact Us
+        03.3.5 PricePlan
+        03.3.6 Faq
+        03.3.7 About Us
+
+	03.4 Projects
+		03.4.1 Project Grid
+		03.4.2 Project Medium
+		03.4.3 Project Modren
+		03.4.4 Artist Detail
+
+	03.5 Team
+		03.5.1 Team Grid
+		03.5.2 Team Detail
+
+	03.6 Shop
+		03.6.1 Shop Grid
+		03.6.2 Shop Detail
+ 
+04. Sidebar Widget
+	04.1 Widget CATEGORY WIDGET
+	04.2 Widget Latest News
+	04.3 Widget Calendar Archive
+	04.4 Widget Text
+	04.5 Widget Recent Posts
+	04.7 Widget Intagram Photos
+	04.8 Popular Tags
+	04.9 User Links
+ 
+05. Footer
+    05.1 Footer Widgets
+    05.2 CopyRight
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #ffffff;
+    color: #576777;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+    color: #555555;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 1.1px;
+    margin: 0 0 8px;
+}
+h1 {
+    font-size: 26px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 22px;
+}
+h4 {
+    font-size: 20px;
+}
+h5 {
+    font-size: 18px;
+}
+h6 {
+    font-size: 16px;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #555555;
+}
+p a {
+    color: #555555;
+}
+p {
+    line-height: 24px;
+    letter-spacing: 1.1px;
+    margin-bottom: 10px;
+}
+a {
+    color: #555555;
+    text-decoration: none;
+}
+a:hover, a:focus, a:active {
+    outline: none;
+}
+ul {
+    margin-bottom: 0;
+}
+figure {
+    margin-bottom: 6px;
+    position: relative;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+strong {
+    color: #555555;
+}
+iframe {
+    border: none;
+    float: left;
+    width: 100%;
+}
+.wp-caption, .wp-caption-text, .gallery-caption, .bypostauthor {
+}
+.wp-caption.alignleft, .wp-caption.alignnone {
+    width: 100%;
+}
+select {
+    background-color: #f0eef0;
+    border: 1px solid #dfdfdf;
+    color: #666666;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 300;
+    height: 40px;
+    padding: 8px 12px;
+    width: 100%;
+}
+label {
+    color: #6c8391;
+    display: block;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+button {
+    border: none;
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    background-color: #f2f2f2;
+    border: none;
+    box-sizing: border-box;
+    color: #aaa9a9;
+    display: inline-block;
+    font-size: 13px;
+    height: 30px;
+    line-height: 20px;
+    outline: none;
+    padding: 4px 6px;
+    vertical-align: middle;
+    box-shadow: none;
+}
+input[type="submit"] {
+    outline: none;
+}
+form p {
+    float: left;
+    position: relative;
+}
+form p span i {
+    color: #474747;
+    left: 16px;
+    position: absolute;
+    top: 13px;
+}
+option {
+    padding: 5px 15px;
+}
+li {
+    line-height: 28px;
+    list-style: inside none disc;
+}
+ul ul {
+    margin-left: 20px;
+}
+ol {
+    float: none;
+    list-style: outside none decimal;
+    padding-left: 15px;
+}
+ol ol {
+    margin-left: 20px;
+}
+ol li {
+    list-style: outside none decimal;
+    width: 100%;
+}
+table {
+    background-color: transparent;
+    max-width: 100%;
+}
+th {
+    text-align: left;
+}
+table {
+    margin-bottom: 15px;
+    width: 100%;
+}
+table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
+    border: 1px solid #dddddd;
+    line-height: 2.5;
+    padding-left: 3px;
+    text-align: center;
+    vertical-align: top;
+}
+table thead tr th {
+    border-top: 1px solid #dddddd;
+    text-align: center;
+    text-transform: capitalize;
+}
+.table > caption + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > th, .table > thead:first-child > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > td {
+    border-top: 1px solid #dddddd;
+}
+table > thead > tr > th {
+    border-bottom: 2px solid #dddddd;
+    vertical-align: bottom;
+}
+table > caption + thead > tr:first-child > th, table > colgroup + thead > tr:first-child > th, table > thead:first-child > tr:first-child > th, table > caption + thead > tr:first-child > td, table > colgroup + thead > tr:first-child > td, table > thead:first-child > tr:first-child > td {
+    border-bottom: 0 none;
+}
+table > tbody + tbody {
+    border-top: 2px solid #dddddd;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 6px 10px;
+}
+p ins {
+    color: #999;
+}
+dl dd 	{ margin-left: 20px; }
+address { font-style: italic; }
+.sticky {}
+.careplus-main-section {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.careplus-main-content 	    { padding: 100px 0px 60px 0px; }
+.careplus-right-section 	{ float: right; }
+.careplus-left-section 	    { float: left; }
+.careplus-main-wrapper,.careplus-main-content,
+.careplus-main-header,.careplus-navigation-section {
+    float: left;
+    width: 100%;
+}
+/* Header */
+.careplus-sticky .careplus-navigation-section {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.careplus-main-header { background-color: #ffffff; }
+.careplus-logo {
+    float: left;
+    padding: 40px 0px 36px 0px;
+}
+.careplus-logo:before {
+    content: '';
+    position: absolute;
+    right: 32px;
+    top: -8px;
+    width: 4px;
+    height: 120%;
+}
+/* Info List */
+.careplus-infolist {
+    float: left;
+    width: 77%;
+    padding-left: 10px;
+}
+.careplus-infolist li {
+    float: left;
+    width: 33.333%;
+    list-style: none;
+    padding-left: 60px;
+    position: relative;
+    line-height: 1.4;
+    margin-top: 40px;
+}
+.careplus-infolist li i {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 9px;
+}
+.careplus-infolist li a,
+.careplus-infolist li span {
+    color: #576777;
+    letter-spacing: 1.1px;
+    font-size: 13px;
+}
+.careplus-infolist li span {
+    display: block;
+    margin-bottom: 2px;
+}
+.careplus-booking-btn {
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.1px;
+    padding: 7px 14px 10px 14px;
+    color: #ffffff;
+    border-radius: 4px;
+    margin-top: 41px;
+}
+.careplus-navigation-section {
+    position: relative;
+    text-align: center;
+    z-index: 999;
+}
+.careplus-navinner { display: inline-block; }
+/* Navigation */
+.navbar {
+    background: none;
+    border: none;
+    float: left;
+    margin-bottom: 0px;
+    text-align: left;
+}
+.navbar-nav > li { padding: 0px 26px 0px 26px; }
+.navbar-nav > li > a {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 29px 0px 26px 0px;
+    position: relative;
+}
+.navbar-nav > li > a:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    width: 100%;
+    height: 4px;
+    opacity: 0;
+}
+.navbar-nav > li > a:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    margin-left: -9px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 4px solid;
+    opacity: 0;
+}
+.navbar-nav > li:hover > a:after,.navbar-nav > li:hover > a:before,.navbar-nav > li.active > a:after,.navbar-nav > li.active > a:before { opacity: 1; }
+.navbar-nav > li:first-child { padding-left: 0px; }
+.navbar-nav > li:last-child { padding-right: 0px; }
+.navbar-nav li:hover > .careplus-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+.careplus-dropdown-menu {
+    background-color: #ffffff;
+    left: 0;
+    margin: 10px 0px 0px 0px;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    width: 240px;
+    z-index: 999;
+}
+.careplus-dropdown-menu .careplus-dropdown-menu {
+    left: 100%;
+    top: 0%;
+    margin: 0px 0px 0px 5px;
+}
+.careplus-dropdown-menu > li {
+    float: left;
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+.careplus-dropdown-menu li a {
+    border-bottom: 1px solid #f8f8f8;
+    color: #576777;
+    float: left;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 13px 25px;
+    width: 100%;
+}
+.careplus-dropdown-menu > li:last-child > a { border: none; }
+.careplus-dropdown-menu > li.subdropdown-addicon > a:before {
+    content: "\f107";
+    font-family: FontAwesome;
+    float: right;
+    margin: 0px 0px 0px 0px;
+    color: #999;
+}
+/* Mega Menu */
+#careplus-header .container { position: relative; }
+.nav > li.careplus-megamenu-li { position: static; }
+.careplus-megamenu {
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    width: 100%;
+    background-color: #fff;
+    padding: 28px 30px 10px 30px;
+    margin: 10px 0px 0px 0px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+.navbar-nav > li:hover .careplus-megamenu {
+    opacity: 1;
+    visibility: visible;
+}
+.careplus-megamenu li { list-style: none; }
+.careplus-megamenu li h5 {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #576777;
+    margin-bottom: 18px;
+}
+.careplus-megamenu li h4 {
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+.careplus-thumbnail {
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.careplus-thumbnail img {
+    width: 100%;
+}
+.collapse { display: none; }
+/* Mega Menu List */
+.careplus-megalist {
+    float: left;
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+}
+.careplus-megalist li {
+    float: left;
+    width: 100%;
+    list-style: none;
+    border-bottom: 1px solid #f8f8f8;
+    padding: 8px 0px 8px 0px;
+    position: relative;
+}
+.careplus-megalist li a {
+    color: #576777;
+    font-size: 14px;
+    font-weight: 400;
+}
+.careplus-megalist li:last-child {
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+.careplus-mega-text p { margin-bottom: 30px; }
+.careplus-user-list {
+    float: left;
+    margin: 9px 0px 0px 13px;
+}
+.careplus-user-list li {
+    float: left;
+    list-style: none;
+    margin: 15px 0px 0px 32px;
+    position: relative;
+    padding-bottom: 23px;
+}
+.careplus-user-list li a { font-size: 14px; }
+/* Search Modal */
+.searchmodal form {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+.searchmodal .modal-body {
+    display: inline-block;
+    width: 100%;
+    padding: 0px;
+    position: relative;
+}
+.searchmodal form input[type="text"] {
+    float: left;
+    width: 100%;
+    background-color: #ffffff;
+    color: #999;
+    font-size: 20px;
+    font-style: italic;
+    height: 60px;
+    padding: 6px 30px;
+    border-radius: 40px;
+}
+.searchmodal form input[type="submit"] {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    height: 60px;
+    width: 60px;
+    background-color: transparent;
+    border: none;
+    z-index: 2;
+}
+.searchmodal form i {
+    position: absolute;
+    right: 28px;
+    top: 20px;
+    color: #999;
+    font-size: 18px;
+    z-index: 0;
+}
+.careplus-close-btn {
+    position: absolute;
+    right: 40%;
+    top: -50px;
+    color: #999;
+    background-color: #ffffff;
+    width: 100px;
+    height: 50px;
+    border-radius: 100px 100px 0px 0px;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 8px;
+}
+.careplus-cart-box {
+    position: absolute;
+    right: 0px;
+    top: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 28px;
+    width: 300px;
+    margin-top: 5px;
+    display: none;
+}
+.careplus-cart-box p { margin: 0px; }
+/*Banner*/
+.careplus-banner-one .container,.careplus-banner-one .row,.careplus-banner-one .col-md-12 { height: 100%;}
+.careplus-banner,.careplus-banner-one,.careplus-banner-one-layer {
+    float: left;
+    width: 100%;
+}
+.careplus-banner-caption {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+}
+.careplus-transparent {
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0.4;
+}
+.careplus-banner-wrap {
+    bottom: 50%;
+    left: 0;
+    margin: 0 0 -142px;
+    position: absolute;
+    width: 50%;
+}
+.careplus-banner-wrap h1 {
+    font-size: 50px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 20px;
+    float: left;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.careplus-banner-wrap h1 span {
+    font-size: 30px;
+    display: block;
+    margin: 0px 0px 2px;
+    letter-spacing: 2px;
+}
+.careplus-banner-wrap h1 span:last-child { text-align: right; margin: 8px 0 0;}
+.careplus-banner-wrap p {
+    color: #ffffff;
+    margin-bottom: 29px;
+    font-size: 16px;
+    float: left;
+    line-height: 28px;
+    width: 84%;
+}
+.careplus-transparent-shape {
+    height: 100%;
+    left: -17%;
+    position: absolute;
+    top: 0;
+    width: 68%;
+}
+.careplus-banner-btn {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    color: #ffffff;
+    padding: 10px 23px;
+}
+.careplus-banner-btn:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background-color: #ffffff;
+    width: 52px;
+    height: 1px;
+}
+.careplus-banner-btn:after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    bottom: -7px;
+    background-color: #ffffff;
+    width: 1px;
+    height: 32px;
+}
+.careplus-banner-btn span {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.careplus-banner-btn span:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: #ffffff;
+    width: 52px;
+    height: 1px;
+}
+.careplus-banner-btn span:after {
+    content: '';
+    position: absolute;
+    right: 7px;
+    top: -7px;
+    background-color: #ffffff;
+    width: 1px;
+    height: 32px;
+}
+/*banner form*/
+.careplus-appointment-form form ul li,.careplus-appointment-form form ul li input[type="text"],
+.careplus-select {
+    float: left;
+    width: 100%;
+}
+.careplus-appointment-form {
+    bottom: 50%;
+    margin: 0 0 -238px;
+    position: absolute;
+    right: 0;
+    width: 50%;
+}
+.careplus-appointment-form form {
+    width: 336px;
+    float: right;
+    padding: 31px 36px 15px 40px;
+    border-right: 4px solid;
+    background-color: rgba(8,54,75,0.85);
+    position: relative;
+}
+.careplus-appointment-form form:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-top: 45px solid;
+    border-left: 45px solid transparent;
+}
+.careplus-appointment-form form:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-bottom: 45px solid;
+    border-left: 45px solid transparent;
+}
+.careplus-appointment-form form label {
+    margin: 0px 0px 8px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.careplus-appointment-form form p {
+    margin: 0px 0px 24px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+.careplus-appointment-form form ul li {
+    list-style: none;
+    margin: 0px 0px 25px;
+    position: relative;
+}
+.careplus-appointment-form form ul li input[type="text"] {
+    background-color: #ffffff;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 12px;
+    color: #999999;
+    font-style: italic;
+    padding-left: 14px;
+}
+.careplus-appointment-form form ul li i {
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    color: #999999;
+    font-size: 12px;
+}
+.careplus-select select {
+    font-style: italic;
+    font-size: 12px;
+    border: none;
+    color: #999999;
+    background-color: #fff;
+    border-bottom: 1px solid #ececec;
+    height: 40px;
+    border-radius: 5px;
+}
+.careplus-select                                     { position: relative;}
+.careplus-select:after {
+    content: "\f107";
+    font-family: FontAwesome;
+    font-size: 12px;
+    color: #999999;
+    right: 0px;
+    bottom: 1px;
+    text-align: center;
+    position: absolute;
+    pointer-events: none;
+    background-color: #fff;
+    width: 40px;
+    padding: 5px 2px 0px 0px;
+    height: 39px;
+    border-radius: 5px;
+}
+.careplus-appointment-form form ul li input[type="submit"] {
+    border: none;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 5px 23px 7px;
+    border-radius: 5px;
+}
+
+/*fancy-title*/
+.careplus-fancy-title {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 0px 0px 60px;
+}
+.careplus-fancy-title h2 {
+    line-height: 0.7;
+    font-size: 30px;
+    margin: 0px 0px 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.careplus-fancy-title span {
+    display: inline-block;
+    position: relative;
+    padding: 0px 2px;
+}
+.careplus-fancy-title span:before {
+    content: '';
+    position: absolute;
+    left: -75px;
+    top: 14px;
+    width: 75px;
+    height: 1px;
+}
+.careplus-fancy-title span:after {
+    content: '';
+    position: absolute;
+    right: -75px;
+    top: 14px;
+    width: 75px;
+    height: 1px;
+}
+.careplus-fancy-title span i {
+    font-size: 25px;
+}
+.careplus-fancy-title span small {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+}
+.careplus-fancy-title span small:before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 11px;
+    width: 40px;
+    height: 1px;
+}
+.careplus-fancy-title span small:after {
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: 11px;
+    width: 40px;
+    height: 1px;
+}
+
+/*Service*/
+.careplus-service,.careplus-service-wrap {
+    float: left;
+    width: 100%;
+}
+.careplus-service > ul > li {
+    list-style: none;
+    margin: 0px 0px 30px;
+}
+.careplus-service-wrap {
+    height: 213px;
+    overflow: hidden;
+    padding: 57px 0px 9px;
+    text-align: center;
+    background: rgb(8,54,75); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(8,54,75,1) 15%, rgba(30,77,77,1) 51%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(8,54,75,1) 15%,rgba(30,77,77,1) 51%);
+    background: radial-gradient(ellipse at center, rgba(8,54,75,1) 15%,rgba(30,77,77,1) 51%);
+}
+.careplus-service-grid ul li:hover .careplus-service-wrap {
+    padding: 38px 0px 34px;
+    background: -webkit-linear-gradient(left, #1d4c4d 0%,#08364b 0%,#08364b 100%,#1d4c4d 100%);
+    background:    -moz-linear-gradient(left, #1d4c4d 0%,#08364b 0%,#08364b 100%,#1d4c4d 100%);
+    background:     -ms-linear-gradient(left, #1d4c4d 0%,#08364b 0%,#08364b 100%,#1d4c4d 100%);
+    background:      -o-linear-gradient(left, #1d4c4d 0%,#08364b 0%,#08364b 100%,#1d4c4d 100%);
+    background:         linear-gradient(left, #1d4c4d 0%,#08364b 0%,#08364b 100%,#1d4c4d 100%);
+}
+.careplus-service-wrap i {
+    font-size: 64px;
+    display: inline-block;
+    color: #ffffff;
+    margin: 0px 0px 10px;
+}
+.careplus-service-grid ul li:hover i {
+    font-size: 41px;
+    margin: 0px 0px 17px;
+}
+.careplus-service-wrap h5 {
+    margin: 0px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+}
+.careplus-service-grid ul li:hover h5 {
+    text-transform: none;
+    margin: 0px 0px 10px;
+}
+.careplus-service-wrap p {
+    margin: 0px;
+    color: #ffffff;
+    line-height: 22px;
+    opacity: 0;
+    visibility: hidden;
+}
+.careplus-service-grid ul li:hover p {
+    opacity: 1;
+    visibility: visible;
+}
+/*blog-modern*/
+.careplus-blog,.careplus-blog-modern figure,.careplus-blog-modern figure a,.careplus-blog-modern figure a img,.careplus-blog-modern-text {
+    float: left;
+    width: 100%;
+}
+.careplus-blog > ul > li {
+    list-style: none;
+    margin: 0px 0px 30px;
+}
+.careplus-blog-modern figure { margin: 0px;}
+.careplus-blog-modern figure > time {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 65px;
+    height: 65px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 20px;
+    padding: 12px 10px 0px;
+    opacity: 1;
+}
+.careplus-blog-modern ul li:hover figure > time { opacity: 0;}
+.careplus-blog-modern figure a {
+    position: relative;
+    overflow: hidden;
+}
+.careplus-blog-modern figure a:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+}
+.careplus-blog-modern ul li:hover figure a:before { opacity: 1; height: 100%;}
+.careplus-blog-modern figure a span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 18px;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    padding: 13px 0px 0px;
+    margin: -27px 0px 0px -27px;
+    opacity: 0;
+}
+.careplus-blog-modern ul li:hover figure a span { opacity: 1;}
+.careplus-blog-modern figure a span:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 1px;
+}
+.careplus-blog-modern ul li:hover figure a span:before { width: 64px;}
+.careplus-blog-modern figure a span:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 0px;
+}
+.careplus-blog-modern ul li:hover figure a span:after { height: 63px;}
+.careplus-blog-modern figure a span small {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.careplus-blog-modern figure a span small:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 0px;
+    height: 1px;
+}
+.careplus-blog-modern ul li:hover figure a span small:before { width: 64px;}
+.careplus-blog-modern figure a span small:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 1px;
+    height: 0px;
+}
+.careplus-blog-modern ul li:hover figure a span small:after { height: 63px;}
+.careplus-blog-modern-text {
+    position: relative;
+    background-color: #f5f5f5;
+    border-top: 5px solid;
+    padding: 25px 30px 30px;
+    position: relative;
+}
+.careplus-blog-modern-text:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-top: 30px solid;
+    border-left: 30px solid transparent;
+}
+.careplus-blog-modern-text h5 {
+    margin: 0px 0px 17px;
+    font-weight: bold;
+    line-height: 24px;
+}
+.careplus-blog-modern-text p {
+    margin: 0px 0px 24px;
+    color: #686868;
+}
+.careplus-readmore-btn {
+    display: inline-block;
+    font-size: 13px;
+    color: #888888;
+    font-weight: bold;
+    position: relative;
+    padding: 4px 21px;
+}
+.careplus-blog ul li:hover .careplus-readmore-btn { color: #ffffff;}
+.careplus-readmore-btn:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 106%;
+    height: 1px;
+    background-color: #bbbbbb;
+}
+.careplus-blog ul li:hover .careplus-readmore-btn:before,
+.careplus-blog ul li:hover .careplus-readmore-btn span:before { width: 100%; }
+.careplus-readmore-btn:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 119%;
+    background-color: #bbbbbb;
+}
+.careplus-blog ul li:hover .careplus-readmore-btn:after,
+.careplus-blog ul li:hover .careplus-readmore-btn span:after { height: 100%; }
+.careplus-readmore-btn span {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+}
+.careplus-readmore-btn span:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 106%;
+    height: 1px;
+    background-color: #bbbbbb;
+}
+.careplus-readmore-btn span:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 1px;
+    height: 119%;
+    background-color: #bbbbbb;
+}
+/*Section-post*/
+.careplus-content-post,.careplus-content-post-title,.careplus-post-list {
+    float: left;
+    width: 100%;
+}
+.careplus-content-post-title { margin: 0px 0px 21px;}
+.careplus-content-post-title h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0px 0px 4px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.careplus-content-post-title span {
+    display: inline-block;
+    position: relative;
+    padding: 0px 1px 0px 0px;
+}
+.careplus-content-post-title span:before {
+    content: '';
+    position: absolute;
+    right: -75px;
+    top: 14px;
+    background-color: #ffffff;
+    width: 75px;
+    height: 1px;
+}
+.careplus-content-post-title span:after {
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: 11px;
+    background-color: #ffffff;
+    width: 40px;
+    height: 1px;
+}
+.careplus-content-post-title span i {
+    font-size: 25px;
+}
+.careplus-content-post p {
+    margin: 0px 0px 38px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+.careplus-post-list { margin: 0px 0px 21px;}
+.careplus-post-list li {
+    float: left;
+    width: 50%;
+    list-style: none;
+    padding: 0px 0px 0px 61px;
+    position: relative;
+    color: #ffffff;
+    line-height: 24px;
+    letter-spacing: 1.1px;
+    margin: 0px 0px 27px;
+}
+.careplus-post-list li i {
+    position: absolute;
+    left: 0px;
+    top: 6px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 12px 0px 0px;
+}
+.careplus-post-list li i:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-bottom: 9px solid;
+    border-left: 9px solid transparent;
+}
+.careplus-content-post .careplus-readmore-btn {
+    padding: 14px 19px 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.careplus-content-post .careplus-readmore-btn:before,.careplus-content-post .careplus-readmore-btn span:before { width: 108%;}
+.careplus-content-post .careplus-readmore-btn:after,.careplus-content-post .careplus-readmore-btn span:after { height: 122%;}
+.careplus-content-post .careplus-readmore-btn:hover:before,.careplus-content-post .careplus-readmore-btn span:hover:before { width: 100%;}
+.careplus-content-post .careplus-readmore-btn:hover:after,.careplus-content-post .careplus-readmore-btn span:hover:after { height: 100%;}
+
+/*Team Medium*/
+.careplus-team,.careplus-team-medium,.careplus-team-medium figure,.careplus-team-medium figure > a,.careplus-team-medium figure a img {
+    float: left;
+    width: 100%;
+}
+.careplus-team > ul > li {
+    list-style: none;
+    margin: 0px 0px 30px;
+}
+.careplus-team-medium figure {
+    margin: 0px;
+    padding: 83px 0px 0px;
+}
+.careplus-team-medium figure figcaption {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.careplus-team-medium-info,.careplus-team-medium-text {
+    line-height: 1;
+}
+.careplus-team-medium-info {
+    padding: 16px 28px 23px;
+    visibility: visible;
+    width: 100%;
+    position: relative;
+    border-bottom: 4px solid;
+}
+.careplus-team-medium ul li:hover .careplus-team-medium-info {
+    visibility: hidden;
+    opacity: 0;
+}
+.careplus-team-medium-info:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-bottom: 20px solid;
+    border-left: 20px solid transparent;
+}
+.careplus-team-medium-text {
+    padding: 34px 28px 40px;
+    border-bottom: 4px solid;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+}
+.careplus-team-medium-text:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-bottom: 20px solid;
+    border-left: 20px solid transparent;
+}
+.careplus-team-medium ul li:hover .careplus-team-medium-text {
+    visibility: visible;
+    opacity: 1;
+}
+.careplus-team-medium-info h5,.careplus-team-medium-text h5 {
+    margin: 0px 0px 2px;
+    display: inline-block;
+    font-weight: bold;
+}
+.careplus-team-medium-info h5 a,.careplus-team-medium-text h5 a { color: #ffffff;}
+.careplus-team-medium-info > span,.careplus-team-medium-text > span {
+    display: inline-block;
+    font-size: 12px;
+    color: #cccccc;
+    line-height: 1;
+}
+.careplus-team-medium-text > span {
+    margin: 0px 0px 21px;
+    color: #ffffff;
+}
+.careplus-team-medium-text p {
+    color: #ffffff;
+    margin: 0px 0px 18px;
+    display: inline-block;
+}
+.careplus-team-social { text-align: center; margin: 0px 0px 22px;}
+.careplus-team-social li {
+    display: inline-block;
+    margin: 0px 14px 0px 0px;
+}
+.careplus-team-social li > a {
+    color: #ffffff;
+    font-size: 18px;
+}
+.careplus-team-medium .careplus-readmore-btn {
+    padding: 13px 21px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.careplus-team-medium .careplus-readmore-btn:before,.careplus-team-medium .careplus-readmore-btn:after,
+.careplus-team-medium .careplus-readmore-btn span:before,.careplus-team-medium .careplus-readmore-btn span:after { background-color: #ffffff;}
+.careplus-team-medium .careplus-readmore-btn:after,.careplus-team-medium .careplus-readmore-btn span:after { height: 117%;}
+
+/*Gallery*/
+.careplus-gallery,.careplus-gallery-filterable,.careplus-gallery-filterable ul li a,.careplus-plane-gallery figure > a,
+.careplus-plane-gallery ul li figure img,.careplus-plane-gallery ul li figure {
+    float: left;
+    width: 100%;
+}
+.careplus-gallery-filterable {
+    text-align: center;
+    margin-bottom: 29px;
+}
+.careplus-gallery-filterable ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 33px -5px;
+}
+.filters-button-group {
+    border-bottom: 1px solid #ececec;
+    margin: 0px 0px 21px;
+}
+.careplus-gallery-filterable ul li a {
+    font-size: 16px;
+    padding: 2px 0px 15px;
+    border-radius: 2px;
+    color: #868686;
+    border-bottom: 3px solid #ffffff;
+    position: relative;
+    letter-spacing: 1px;
+}
+.careplus-gallery-filterable ul li a:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 5px solid #ffffff;
+    margin: 0px 0px 0px -8px;
+}
+.careplus-gallery-filterable ul li a.is-checked { border-bottom: 3px solid;}
+.careplus-gallery ul li {
+    list-style: none;
+    margin-bottom: 30px;
+}
+.careplus-plane-gallery ul li figure                              { margin-bottom: 0px; overflow: hidden;}
+.careplus-plane-gallery figure figcaption {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    margin: -52px 0px 0px 0px;
+    padding: 0px 30px;
+}
+.careplus-plane-gallery figure > a { position: relative;}
+.careplus-plane-gallery figure > a:before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 11px;
+    width: 92%;
+    height: 91%;
+    opacity: 0;
+}
+.careplus-plane-gallery ul li:hover figure > a:before { opacity: 1;}
+.careplus-plane-gallery figure:before {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 23px;
+    width: 0%;
+    height: 1px;
+    z-index: 1;
+    opacity: 0;
+}
+.careplus-plane-gallery figure:after {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 23px;
+    width: 1px;
+    height: 0%;
+    opacity: 0;
+}
+.careplus-plane-gallery figure span {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+}
+.careplus-plane-gallery figure span:before {
+    content: '';
+    position: absolute;
+    right: 23px;
+    bottom: 23px;
+    width: 0%;
+    height: 1px;
+    z-index: 1;
+    opacity: 0;
+}
+.careplus-plane-gallery ul li:hover figure:before,.careplus-plane-gallery ul li:hover figure span:before { opacity: 1; width: 87%;}
+.careplus-plane-gallery figure span:after {
+    content: '';
+    position: absolute;
+    right: 23px;
+    bottom: 23px;
+    width: 1px;
+    height: 0%;
+    z-index: 1;
+    opacity: 0;
+}
+.careplus-plane-gallery ul li:hover figure span:after,.careplus-plane-gallery ul li:hover figure:after { opacity: 1; height: 87%;}
+.careplus-plane-gallery figure figcaption > a {
+    display: inline-block;
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid;
+    text-align: center;
+    padding: 10px 0px 0px;
+    margin: 0px 0px 23px;
+    opacity: 0;
+}
+.careplus-plane-gallery ul li:hover figure figcaption > a,.careplus-plane-gallery ul li:hover figure figcaption > h6 {  opacity: 1; }
+.careplus-plane-gallery figure figcaption > h6 {
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0px;
+    opacity: 0;
+}
+/*careplus Tabs*/
+.careplus-tabs,.careplus-tabs-thumb span,.careplus-tabs-thumb span img,.careplus-tab-wrap,.careplus-tabs-list {
+    float: left;
+    width: 100%;
+}
+.careplus-tabs-thumb {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 33.333%;
+}
+.careplus-tabs { margin: 5px 0px 0px;}
+.careplus-tabs-thumb span {
+    margin: 0px;
+    width: 800px;
+    position: relative;
+}
+.careplus-tabs-thumb span:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0.75;
+}
+.careplus-images-list-layer > span {
+    width: 126px;
+    height: 95px;
+    margin: 0px 0px 22px 0px;
+    color: #ffffff;
+    cursor: pointer;
+    float: left;
+    font-size: 57px;
+    border: 1px solid #ffffff;
+    text-align: center;
+    position: relative;
+}
+.careplus-images-list-layer.slick-slide.slick-current.slick-active > span { background-color: #ffffff; color: #aaaaaa;}
+.careplus-images-list-layer.slick-slide.slick-current.slick-active > span:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    width: 51%;
+    height: 8px;
+    background-color: #ffffff;
+}
+.careplus-images-list-layer.slick-slide.slick-current.slick-active span:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: -5px;
+    width: 51%;
+    height: 8px;
+    background-color: #ffffff;
+}
+.careplus-tabs-text {
+    float: left;
+    width: 100%;
+}
+.careplus-tabs-text h4 {
+    margin: 0px 0px 19px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.careplus-tabs-text p {
+    float: left;
+    width: 100%;
+    margin: 0px 0px 18px;
+    color: #ffffff;
+}
+.careplus-tab-color {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+.careplus-tab-wrap {
+    position: relative;
+    padding: 68px 0px 67px;
+}
+.careplus-tab-color .col-md-8 { float: right;}
+.careplus-tab-color .careplus-content-post-title span i { color: #ffffff;}
+.careplus-tab-color .careplus-readmore-btn:before,.careplus-tab-color .careplus-readmore-btn:after,
+.careplus-tab-color .careplus-readmore-btn span:before,.careplus-tab-color .careplus-readmore-btn span:after { background-color: #ffffff;}
+.careplus-tab-color .careplus-readmore-btn {
+    color: #ffffff;
+    font-weight: 400;
+    margin: 26px 0px 8px 9px;
+    padding: 13px 20px;
+}
+.careplus-tab-color .careplus-content-post-title { margin: 0px 0px 29px;}
+.careplus-tabs-thumb:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-bottom: 202px solid transparent;
+    border-right: 52px solid;
+    border-top: 439px solid transparent;
+}
+/*careplus-department-counter*/
+.careplus-department-counter {
+    float: left;
+    width: 100%;
+}
+.careplus-department-counter ul li {
+    float: left;
+    width: 25%;
+    padding: 67px 35px 68px 0;
+    position: relative;
+    list-style: none;
+    line-height: 1;
+    background: -webkit-linear-gradient(left, rgba(31,72,89,1) 0%, rgba(8,54,75,1) 89%);
+    background:    -moz-linear-gradient(left, rgba(31,72,89,1) 0%, rgba(8,54,75,1) 89%);
+    background:     -ms-linear-gradient(left, rgba(31,72,89,1) 0%, rgba(8,54,75,1) 89%);
+    background:      -o-linear-gradient(left, rgba(31,72,89,1) 0%, rgba(8,54,75,1) 89%);
+    background:         linear-gradient(left, rgba(31,72,89,1) 0%, rgba(8,54,75,1) 89%);
+}
+.careplus-department-counter ul li i {
+    font-size: 150px;
+    position: absolute;
+    left: 0px;
+    top: 19px;
+    color: #ffffff;
+    opacity: 0.10;
+}
+.careplus-department-counter ul li span {
+    bottom: -42px;
+    color: #ffffff;
+    font-size: 80px;
+    font-weight: bold;
+    left: -24px;
+    position: absolute;
+}
+.careplus-department-counter ul li h6 {
+    font-weight: 400;
+    margin: 0px;
+    float: right;
+    color: #ffffff;
+    background-color: #13455c;
+    padding: 3px 35px 7px 85px;
+    border-radius: 25px;
+    position: relative;
+
+}
+/*Testimonial*/
+.careplus-testimonial,.careplus-testimonial-wrap,.careplus-testimonial-wrap figure img,.careplus-testimonial-text {
+
+    float: left;
+    width: 100%;
+}
+.careplus-testimonial ul li {
+    list-style: none;
+    margin: 0px 0px 30px;
+}
+.careplus-testimonial-wrap {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 40px 33px 35px;
+    position: relative;
+}
+.careplus-testimonial-wrap:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-top: 80px solid;
+    border-right: 80px solid transparent;
+}
+.careplus-testimonial-wrap i {
+    font-size: 47px;
+    color: #ffffff;
+    position: absolute;
+    left: 14px;
+    top: 9px;
+    opacity: 0.3;
+}
+.careplus-testimonial-wrap figure {
+    display: inline-block;
+    width: 70px;
+    margin: 0px 0px 6px;
+}
+.careplus-testimonial-wrap figure img { border-radius: 100%;}
+.careplus-testimonial-text { line-height: 1;}
+.careplus-testimonial-text h6 {
+    margin: 0px 0px 1px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+.careplus-testimonial-text span {
+    font-size: 12px;
+    color: #888888;
+    margin: 0px 0px 16px;
+    display: inline-block;
+}
+.careplus-testimonial-text p {
+    margin: 0px;
+    font-style: italic;
+    color: #555555;
+    font-size: 15px;
+    line-height: 26px;
+}
+
+/*PARTNER*/
+.careplus-partners,.careplus-partners ul li figure {
+    float: left;
+    width: 100%;
+}
+.careplus-partners { margin: 0px 0px 40px;}
+.careplus-partners ul { margin: 0px -20px;}
+.careplus-partners ul li {
+    float: left;
+    width: 20%;
+    list-style: none;
+    padding: 0px 20px;
+}
+.careplus-partners ul li figure {
+    margin: 0px;
+    background: url("images/partner-layer.png");
+    opacity: 0.5;
+}
+.careplus-partners ul li:hover figure { opacity: 1;}
+.careplus-partners ul li figure span {
+    position: absolute;
+    left: 50%;
+    top: -35px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    color: #fff;
+    padding: 2px 10px 2px 12px;
+    border-bottom: 2px solid;
+    letter-spacing: 1px;
+    margin: 0px 0px 0px -56px;
+    z-index: -1;
+}
+.careplus-partners ul li:hover figure span {
+    opacity: 1;
+    visibility: visible;
+    top: -51px;
+}
+.careplus-partners ul li figure span:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -9px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 8px solid;
+    margin: 0px 0px 0px -7px;
+}
+
+/*Footer*/
+#careplus-footer {
+    float: left;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+/* Footer One */
+.careplus-footer-one { background-image: url("extra-images/footer-back-img.jpg"); }
+.careplus-footer-one:before {
+    content: '';
+    background: url(images/footer-shape.png);
+    content: "";
+    height: 100%;
+    left: 184px;
+    position: absolute;
+    top: 0;
+    width: 138px;
+    z-index: 1;
+}
+.careplus-footer-transparent {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.95;
+}
+/* Footer Widget */
+.careplus-footer-widget {
+    float: left;
+    width: 100%;
+    padding: 81px 0px 2px 0px;
+    position: relative;
+    z-index: 1;
+}
+.careplus-footer-widget .widget                                   { margin-bottom: 50px; }
+
+/*widget_contact_info*/
+.footer-logo {
+    float: left;
+    margin: 0px 0px 31px;
+}
+.widget_contact_info p {
+    margin: 0px 0px 36px;
+    color: #ffffff;
+    float: left;
+    width: 100%;
+}
+.widget_contact_info ul,.widget_contact_info ul li {
+    float: left;
+    width: 100%;
+}
+.widget_contact_info ul li {
+    list-style: none;
+    margin: 0px 0px 16px;
+}
+.widget_contact_info ul li h6 {
+    float: left;
+    margin: 0px;
+    width: 32%;
+}
+.widget_contact_info ul li span,.widget_contact_info ul li a {
+    float: left;
+    color: #ffffff;
+}
+/*careplus-footer-title*/
+.careplus-footer-title {
+    margin: 0px;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 0.7;
+    position: relative;
+    padding: 0px 0px 17px;
+    margin: 0px 0px 30px;
+    font-weight: bold;
+}
+.careplus-footer-title:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 60px;
+    height: 1px;
+}
+.careplus-footer-title:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 3px;
+    width: 40px;
+    height: 1px;
+}
+/*widget_useful_link*/
+.widget_useful_link ul {
+    float: left;
+    width: 100%;
+}
+.widget_useful_link ul li {
+    float: left;
+    width: 50%;
+    list-style: none;
+    margin: 0px 0px 12px;
+}
+.widget_useful_link ul li a {
+    float: left;
+    position: relative;
+    color: #ffffff;
+    padding: 0px 0px 0px 16px;
+}
+.widget_useful_link ul li:hover a { padding: 0px 0px 0px 25px;}
+.widget_useful_link ul li a:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    height: 10px;
+    width: 1px;
+    background-color: #ffffff;
+}
+.widget_useful_link ul li:hover a:before {
+    left: 4px;
+}
+/*widget_newsletter*/
+.widget_newsletter p {
+    margin: 0px 0px 24px;
+    color: #ffffff;
+}
+.widget_newsletter form,.widget_newsletter form ul li,.widget_newsletter form ul li input[type="text"],
+.widget_newsletter form ul li input[type="email"] {
+    float: left;
+    width: 100%;
+}
+.widget_newsletter form ul li {
+    list-style: none;
+    margin: 0px 0px 20px;
+}
+.widget_newsletter form ul li input[type="text"],
+.widget_newsletter form ul li input[type="email"] {
+    background-color: rgba(255,255,255,0.10);
+    font-size: 12px;
+    color: #c2c2c2;
+    height: 35px;
+    font-style: italic;
+    padding-left: 15px;
+}
+.widget_newsletter form ul li label {
+    float: left;
+    margin: 10px 0px 0px;
+    position: relative;
+}
+.widget_newsletter form ul li input[type="submit"] {
+    border: none;
+    background-color: transparent;
+    padding: 3px 28px 4px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+.widget_newsletter form ul li label:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 128px;
+    height: 1px;
+    background-color: #ffffff;
+}
+.widget_newsletter form ul li label:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 42px;
+    background-color: #ffffff;
+}
+.widget_newsletter form ul li label span {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.widget_newsletter form ul li label span:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 128px;
+    height: 1px;
+    background-color: #ffffff;
+}
+.widget_newsletter form ul li label span:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 1px;
+    height: 42px;
+    background-color: #ffffff;
+}
+/*Copyright*/
+.careplus-copyright {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding: 23px 0px 21px;
+
+}
+.careplus-copyright:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50%;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 0.2;
+    margin: 0px 0px 0px -26px;
+}
+.careplus-copyright:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 50%;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 0.2;
+    margin: 0px -26px 0px 0px;
+}
+.careplus-back-top:before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    height: 38px;
+    width: 1px;
+    background-color: #ffffff;
+    bottom: -6px;
+    opacity: 0.4;
+}
+.careplus-back-top:after {
+    background-color: #ffffff;
+    bottom: -6px;
+    content: "";
+    height: 38px;
+    position: absolute;
+    right: 12px;
+    width: 1px;
+    opacity: 0.4;
+}
+.careplus-back-top {
+    color: #ffffff;
+    left: 50%;
+    margin: 0 0 0 -24px;
+    position: absolute;
+    text-align: center;
+    top: -39px;
+    width: 50px;
+    z-index: 1;
+    height: 17px;
+}
+.careplus-copyright p {
+    margin: 0px;
+    float: left;
+    color: #ffffff;
+}
+.careplus-copyright p a { color: #ffffff;}
+
+/*careplus-footer-social*/
+.careplus-footer-social { float: right;}
+.careplus-footer-social li {
+    float: left;
+    margin: 0px 0px 0px 15px;
+    list-style: none;
+}
+.careplus-footer-social li a { color: #ffffff; font-size: 16px;}
+
+/* SubHeader */
+.careplus-breadcrumb,.careplus-subheader {
+    float: left;
+    width: 100%;
+}
+.careplus-subheader-image {
+    background: url(extra-images/sub-header.jpg);
+    min-height: 250px;
+    padding: 84px 0 0;
+    position: relative;
+    text-align: center;
+    background-position: right bottom;
+}
+.careplus-dark-transparent {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+.careplus-subheader-image h1 {
+    font-size: 34px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 2.3px;
+}
+.careplus-subheader-image span {
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+.careplus-breadcrumb {
+    padding: 15px 0px 17px;
+    position: relative;
+}
+.careplus-breadcrumb:before {
+    content: '';
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 10px solid;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    margin: 0px 0px 0px -16px;
+}
+.careplus-breadcrumb ul li {
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    padding: 0px 13px 0px 0px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #ffffff;
+}
+.careplus-breadcrumb ul .active                   { font-style: italic;}
+.careplus-breadcrumb ul li:first-child:before     { display: none; }
+.careplus-breadcrumb ul li:before {
+    content: "";
+    background-color: #fff;
+    width: 2px;
+    height: 13px;
+    position: absolute;
+    left: -9px;
+    bottom: 7px;
+}
+.careplus-breadcrumb ul li a                      { color: #ffffff;}
+
+/* SubHeader */
+
+/*About Us*/
+.careplus-about-service,.careplus-about-service-list,.careplus-about-image,.careplus-about-image img {
+    float: left;
+    width: 100%;
+}
+.careplus-about-service h2 {
+    margin: 0px 0px 31px;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 0.9;
+    letter-spacing: 1.3px;
+}
+.careplus-about-service h6 {
+    margin: 0px 0px 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 28px;
+}
+.careplus-about-service > p { margin: 0px 0px 30px;}
+.careplus-about-service-list li {
+    list-style: none;
+    float: left;
+    width: 50%;
+    margin: 0px 0px 25px;
+}
+.careplus-about-service-list li h6 {
+    padding: 0px 0px 0px 26px;
+    margin: 0px 0px 13px;
+    font-weight: bold;
+    position: relative;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.careplus-about-service-list li h6 i {
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    font-size: 15px;
+}
+.careplus-about-service-list li p {
+    margin: 0px;
+    padding: 0px 38px 0px 0px;
+    letter-spacing: 0.4px;
+}
+.careplus-about-image {
+    margin: 0px;
+    padding: 0px 0px 0px 30px;
+}
+.careplus-about-image:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    width: 95%;
+    height: 100%;
+    border: 1px dashed;
+    z-index: -1;
+}
+/*careplus-about-post*/
+.careplus-about-transparent {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+.careplus-about-post-text {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.careplus-about-post-text h2 {
+    margin: 0px 0px 38px;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    display: inline-block;
+    width: 65%;
+    letter-spacing: 1.6px;
+    line-height: 40px;
+}
+.careplus-about-post-text .careplus-readmore-btn {
+    line-height: 2;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 4px 21px 6px;
+    font-weight: 400;
+}
+.careplus-about-post-text .careplus-readmore-btn:before,.careplus-about-post-text .careplus-readmore-btn:after,
+.careplus-about-post-text .careplus-readmore-btn span:before,.careplus-about-post-text .careplus-readmore-btn span:after { background-color: #ffffff;}
+
+/*Team Modern*/
+.careplus-team-modern figure,.careplus-team-modern figure > a,.careplus-team-modern figure a img,.careplus-team-modern-text,.carelus-team-social {
+    float: left;
+    width: 100%;
+}
+.careplus-team-modern figure { margin: 0px; overflow: hidden;}
+.careplus-team-modern figure:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 10px;
+    width: 100%;
+    z-index: 1;
+}
+.careplus-team-modern figure:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid;
+    margin: 0px 0px 0px -10px;
+}
+.careplus-team-modern figure figcaption {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0%;
+    opacity: 0;
+    text-align: center;
+    margin: 0px 0px -56px;
+    z-index: 3;
+}
+.careplus-team-modern ul li:hover figure figcaption {
+    opacity: 1;
+    bottom: 50%;
+}
+.carelus-team-social { margin: 0px;}
+.carelus-team-social li {
+    list-style: none;
+    display: inline-block;
+    margin: 0px 9px 0px 0px;
+}
+.carelus-team-social li a {
+    font-size: 18px;
+}
+.careplus-team-modern figure > a {
+    position: relative;
+    overflow: hidden;
+}
+.careplus-team-modern figure > a:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    z-index: 2;
+}
+.careplus-team-modern ul li:hover figure > a:before {
+    height: 100%;
+    opacity: 1;
+}
+.careplus-team-modern figure a span {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    font-size: 15px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 12px 0px 0px;
+    margin: -53px 0px 0px -24px;
+    opacity: 0;
+    z-index: 3;
+}
+.careplus-team-modern ul li:hover figure a span {
+    opacity: 1;
+    top: 50%;
+}
+.careplus-team-modern figure a span:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 55px;
+    height: 1px;
+}
+.careplus-team-modern figure a span:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 55px;
+}
+.careplus-team-modern figure a span small {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.careplus-team-modern figure a span small:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 55px;
+    height: 1px;
+}
+.careplus-team-modern figure a span small:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 1px;
+    height: 55px;
+}
+.careplus-team-modern-text {
+    background-color: #f5f5f5;
+    text-align: center;
+    line-height: 1;
+    position: relative;
+    padding: 13px 0px 19px;
+    position: relative;
+    z-index: 1;
+}
+.careplus-team-modern-text:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: -2px;
+    background-color: #f5f5f5;
+    width: 50%;
+    height: 5px;
+}
+.careplus-team-modern-text:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: -2px;
+    background-color: #f5f5f5;
+    width: 51%;
+    height: 5px;
+}
+.careplus-team-modern-text h5 {
+    margin: 0px;
+    font-weight: bold;
+}
+.careplus-team-modern-text span {
+    color: #868686;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+}
+/*Blog Detail*/
+.careplus-blog-thumb,.careplus-blog-thumb img,.careplus-thumb-heading,.careplus-rich-editor,.careplus-post-tags {
+    float: left;
+    width: 100%;
+}
+.careplus-blog-thumb { margin: 0px;}
+.careplus-thumb-heading {
+    padding: 25px 30px;
+    margin: 0px 0px 32px;
+}
+.careplus-thumb-heading h2 {
+    float: left;
+    margin: 0px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+.careplus-blog-option {
+    float: right;
+}
+.careplus-blog-option li {
+    float: left;
+    list-style: none;
+    margin: 0px 21px 0px 0px;
+    font-size: 12px;
+    color: #ffffff;
+}
+.careplus-blog-option li:last-child { margin-right: 0px;}
+.careplus-blog-option li i {
+    margin: 0px 8px 0px 0px;
+}
+.careplus-rich-editor p {
+    margin: 0px 0px 26px;
+    letter-spacing: 0.9px;
+}
+blockquote {
+    float: left;
+    width: 100%;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    font-style: italic;
+    padding: 37px 30px 28px;
+    letter-spacing: 1.3px;
+    line-height: 26px;
+    margin: 28px 0px 32px;
+    position: relative;
+}
+blockquote i {
+    position: absolute;
+    left: 23px;
+    top: -20px;
+    font-size: 15px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 13px 0px 0px 0px;
+    color: #ffffff;
+    border-radius: 100%;
+}
+/*Post Tags*/
+.careplus-post-tags {
+    border-bottom: 1px solid #ececec;
+    border-top: 1px solid #ececec;
+    padding: 14px 0px 16px 0;
+    margin: 8px 0 40px;
+}
+.careplus-tags,.careplus-tags span,.careplus-tags a                             { float: left;}
+.careplus-tags span {
+    font-weight: 600;
+    font-size: 17px;
+    margin: 0px 19px 0px 0px;
+}
+.careplus-tags span i {
+    float: left;
+    font-size: 16px;
+    margin: 6px 10px 0px 0px;
+}
+.careplus-blog-social,.careplus-blog-social ul                     { float: right;}
+.careplus-tags a {
+    margin-left: 4px;
+    padding: 3px 0 0;
+    margin: 0px 11px 0px 0px;
+    color: #888888;
+}
+.careplus-blog-social span {
+    font-weight: 600;
+    font-size: 17px;
+}
+.careplus-blog-social span i {
+    font-size: 16px;
+    margin: 6px 14px 0px 0px;
+    float: left;
+}
+.careplus-blog-social ul li {
+    float: left;
+    list-style: none;
+    margin: 0px 0px 0px 15px;
+}
+.careplus-blog-social ul li a {
+    float: left;
+    color: #888888;
+    margin: 5px 0px 0px;
+    font-size: 16px;
+}
+/*next-prev-post*/
+.careplus-prenxt-post {
+    float: left;
+    width: 100%;
+    margin: 0px 0px 48px;
+}
+.careplus-prenxt-post ul { margin: 0px -15px;}
+.careplus-prenxt-post ul li {
+    list-style: none;
+    float: left;
+    width: 50%;
+    padding: 0px 15px;
+}
+.careplus-prev-post,.careplus-next-post {
+    float: left;
+    width: 100%;
+    padding: 17px 20px 17px 0px;
+    position: relative;
+}
+.careplus-next-post { padding: 17px 0px 17px 20px;}
+.careplus-prev-post:before,.careplus-next-post:before {
+    background-color: #ececec;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+.careplus-prenxt-post ul li:hover .careplus-prev-post:before,
+.careplus-prenxt-post ul li:hover .careplus-next-post:before {
+    width: 103%;
+}
+.careplus-prev-post:after,.careplus-next-post:after {
+    background-color: #ececec;
+    top: 0px;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 1px;
+}
+.careplus-prenxt-post ul li:hover .careplus-prev-post:after,
+.careplus-prenxt-post ul li:hover .careplus-next-post:after {
+    height: 112%;
+}
+.careplus-prev-post span,.careplus-next-post span {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.careplus-prev-post span:before,.careplus-next-post span:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: #ececec;
+}
+.careplus-prenxt-post ul li:hover .careplus-prev-post span:before,
+.careplus-prenxt-post ul li:hover .careplus-next-post span:before {
+    width: 103%;
+}
+.careplus-prev-post span:after,.careplus-next-post span:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 1px;
+    height: 100%;
+    background-color: #ececec;
+}
+.careplus-prenxt-post ul li:hover .careplus-prev-post span:after,
+.careplus-prenxt-post ul li:hover .careplus-next-post span:after {
+    height: 112%;
+}
+.careplus-prev-post h3,.careplus-next-post h3 {
+    float: left;
+    font-size: 16px;
+    line-height: 1.3;
+    margin: 0px 0px 4px;
+    font-weight: bold;
+}
+.careplus-prev-post h3 { float: right; text-align: right;}
+.careplus-post-arrow {
+    float: right;
+    font-size: 12px;
+    color: #666666;
+    line-height: 1.5;
+    font-style: italic;
+}
+.careplus-post-arrow i { margin: 0px 6px 0px 0px;}
+.careplus-next-post > .careplus-post-arrow { float: left; }
+.careplus-next-post > .careplus-post-arrow i { margin: 0px 0px 0px 6px;}
+/*section heading*/
+.careplus-section-heading,.careplus-related-blog,.careplus-related-blog-text p {
+    float: left;
+    width: 100%;
+}
+.careplus-section-heading { margin: 0px 0px 30px;}
+.careplus-section-heading h2 {
+    margin: 0px;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    line-height: 1;
+    padding: 0px 0px 15px;
+}
+.careplus-section-heading h2:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 60px;
+    height: 1px;
+}
+.careplus-section-heading h2:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 3px;
+    width: 40px;
+    height: 1px;
+}
+/*Related Blog*/
+.careplus-related-blog { margin: 0px 0px 18px;}
+.careplus-related-blog > ul > li {
+    list-style: none;
+    margin: 0px 0px 30px;
+}
+.careplus-related-blog figure {
+    float: left;
+    width: 220px;
+    margin: 0px;
+}
+.careplus-related-blog-text {
+    float: right;
+    width: 68%;
+    background-color: #f5f5f5;
+    padding: 35px 12px 29px 30px;
+    margin: 20px 0 0 -90px;
+    position: relative;
+}
+.careplus-related-blog-text:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 5px;
+    background-color: #e9e9e9;
+}
+.careplus-related-blog-text:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-bottom: 40px solid #e9e9e9;
+    border-left: 40px solid transparent;
+}
+.careplus-related-blog-text > a {
+    position: absolute;
+    color: #999999;
+    bottom: 0px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 0px 0px 0px;
+    z-index: 1;
+}
+.careplus-related-blog > ul > li:hover .careplus-related-blog-text > a { color: #ffffff;}
+.careplus-related-blog-text h5 {
+    margin: 0px 0px 1px;
+    font-weight: bold;
+    line-height: 24px;
+}
+.careplus-related-blog-text .careplus-blog-option {
+    float: left;
+    margin: 0px 0px 9px;
+}
+.careplus-blog-option li a,.careplus-related-blog-text .careplus-blog-option li { color: #888888;}
+.careplus-related-blog-text .careplus-blog-option li:last-child { margin: 0px;}
+.careplus-related-blog-text .careplus-blog-option li { margin: 0 16px 0 0;}
+.careplus-related-blog-text p { margin: 0px;}
+
+/*comment area*/
+.comments-area,.comment-list,.comment-list li,.comment-list li figure a img,.comment-list > ul > li,.comment-list .thumblist,
+.comment-list li img,.thumb-list {
+    float: left;
+    width: 100%;
+}
+.comment-list .children {
+    padding-left: 110px;
+    margin: 0px;
+}
+.comment-list > ul > li {
+    margin: 0px 0px 0px 0px;
+    list-style: none;
+}
+.comment-list .thumblist > ul                      {margin: 0px;}
+.comment-list li                                   {list-style: none;}
+.comment-list li figure {
+    float: left;
+    margin: 0px;
+    width: 80px;
+}
+.comment-list li figure img { border-radius: 100%;}
+.thumb-list {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ececec;
+}
+.comment-list figure ~ .text-holder {
+    margin-left: 83px;
+    position: relative;
+    padding: 8px 0px 16px 28px;
+    line-height: 1;
+}
+.text-holder p {
+    margin-bottom: 8px;
+    display: inline-block;
+    letter-spacing: 0.8px;
+}
+.text-holder h6 {
+    font-weight: bold;
+    line-height: 1;
+    margin: 0px 0px 5px;
+}
+.text-holder .post-date {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    color: #999999;
+    margin: 0px 0px 11px;
+}
+.comment-reply-link {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 13px;
+    color: #999999;
+}
+.comment-reply-link i {
+    font-size: 12px;
+    float: right;
+    margin: 2px 0px 0px 6px;
+}
+/* form*/
+.comment-respond,.careplus-full-form textarea {
+    float: left;
+    width: 100%;
+}
+.comment-respond { margin: 0px 0px 10px;}
+.comment-respond form { margin: 0px -15px;}
+.comment-respond form p {
+    list-style-type: none;
+    margin-bottom: 30px;
+    padding: 0 15px 0;
+    width: 50%;
+}
+.comment-respond form p i {
+    position: absolute;
+    right: 31px;
+    bottom: 18px;
+    font-size: 12px;
+    color: #999999;
+}
+.comment-respond form > .careplus-full-form > i {
+    bottom: auto;
+    top: 14px;
+}
+.comment-respond form p input[type="text"],
+.comment-respond form p input[type="email"] {
+    background-color: transparent;
+    border: 1px solid #ececec;
+    color: #999999;
+    font-size: 12px;
+    float: left;
+    height: 45px;
+    margin: 0;
+    padding-left: 15px;
+    width: 100%;
+    font-style: italic;
+}
+.comment-respond form > .careplus-full-form {
+    float: right;
+    width: 100%;
+}
+.careplus-full-form textarea {
+    height: 205px;
+    color: #424242;
+    font-size: 12px;
+    padding-left: 15px;
+    padding-top: 8px;
+    background-color: transparent;
+    border: 1px solid #ececec;
+    font-style: italic;
+}
+.comment-respond form p input[type="submit"] {
+    border: 1px solid;
+    color: #ffffff;
+    padding: 4px 17px 5px;
+}
+.comment-respond form p input[type="submit"]:hover {
+    background-color: #ffffff;
+}
+.comment-respond form p label {
+    margin: 0px;
+    float: left;
+    position: relative;
+}
+.comment-respond form p label:before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    bottom: 0px;
+    height: 1px;
+    width: 5px;
+}
+.comment-respond form p label:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    height: 5px;
+    width: 1px;
+}
+.comment-respond form p label span {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.comment-respond form p label span:before {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 0px;
+    height: 1px;
+    width: 5px;
+}
+.comment-respond form p label span:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: -5px;
+    height: 5px;
+    width: 1px;
+}
+.comment-list li .children > li .thumb-list { margin-bottom: 30px;}
+.comment-list { margin: 0px 0px 17px;}
+
+/*SideBar*/
+/* Widget Search Form */
+.careplus-main-content .widget { margin: 0px 0px 50px;}
+.widget.widget_department { margin: 0px 0px 34px;}
+.widget.widget_cetagories { margin: 0px 0px 42px;}
+.widget.widget-gallery { margin: 0px 0px 40px;}
+.widget_search,.widget_search form input[type="text"],.widget_search form {
+    float: left;
+    width: 100%;
+}
+.widget_search form { position: relative;}
+.widget_search form input[type="text"] {
+    height: 40px;
+    color: #999999;
+    font-style: italic;
+    font-size: 12px;
+    padding: 3px 20px 3px 15px;
+    background-color: transparent;
+    border: 1px solid #ececec;
+    position: relative;
+}
+.widget_search form label { margin: 0px;}
+.widget_search form label:before {
+    position: absolute;
+    content: "\f002";
+    font-family: FontAwesome;
+    right: 16px;
+    font-size: 12px;
+    color: #999999;
+    z-index: 1;
+    bottom: 11px;
+    cursor: pointer;
+}
+.widget_search form input[type="submit"] {
+    position: absolute;
+    width: 50px;
+    border: none;
+    right: 0px;
+    bottom: 0px;
+    height: 50px;
+    background-color: transparent;
+}
+/* Widget Search Form */
+/*Widget-heading*/
+.careplus-widget-heading {
+    float: left;
+    width: 100%;
+    margin: 0px 0px 30px;
+}
+.careplus-widget-heading h2 {
+    margin: 0px;
+    padding: 0px 0px 15px;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 0.9;
+}
+.careplus-widget-heading h2:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 60px;
+    height: 1px;
+}
+.careplus-widget-heading h2:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 3px;
+    width: 40px;
+    height: 1px;
+}
+/* Widget Cetagories */
+.widget_department{
+    float: left;
+    width: 100%;
+}
+.widget_department ul { margin: 0px 0px 0px -15px;}
+.widget_department ul li {
+    list-style: none;
+    float: left;
+    padding: 0px 0px 0px 15px;
+    margin: 0px 0px 15px;
+    width: 33.333%;
+}
+.widget_department ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 77px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+    padding: 19px 0px 0px;
+}
+.widget_department ul li a i {
+    display: inline-block;
+}
+
+/* Widget Cetagories */
+
+/*Widget Archive*/
+.widget_cetagories,.widget_cetagories ul li,.widget_cetagories ul li a {
+    float: left;
+    width: 100%;
+}
+.widget_cetagories ul li {
+    list-style: none;
+    margin: 0px 0px 8px;
+    border-bottom: 1px solid #ececec;
+    padding: 3px 0px 11px;
+}
+.widget_cetagories ul li:last-child {
+    margin: 0px;
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+.widget_cetagories ul li a {
+    float: left;
+    padding: 0px 0px 0px 16px;
+    position: relative;
+    overflow: hidden;
+}
+.widget_cetagories ul li:hover a {
+    padding: 0px 0px 0px 27px;
+}
+.widget_cetagories ul li a:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 8px;
+    width: 1px;
+    height: 12px;
+}
+.widget_cetagories ul li:hover a:before {
+    left: 5px;
+}
+.widget_cetagories ul li a span {float: right;}
+
+/*Widget Archive*/
+.widget_populer_posts,.widget_populer_posts ul li {
+    float: left;
+    width: 100%;
+}
+.widget_populer_posts ul li {
+    list-style: none;
+    margin: 0px 0px 30px;
+}
+.widget_populer_posts figure {
+    float: left;
+    width: 70px;
+    margin: 0px;
+}
+.widget_populer_posts figure ~ section {
+    margin: 0px 0 0 70px;
+    padding: 0 0px 0 20px;
+    line-height: 1;
+}
+.widget_populer_posts section h6 {
+    margin: 0px 0px 8px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+}
+.widget_populer_posts section time {
+    color: #999999;
+    padding: 0px;
+    font-size: 12px;
+    background-color: transparent;
+}
+.widget_populer_posts section time i {
+    font-size: 10px;
+    float: left;
+    margin: 3px 10px 0px 0px;
+}
+.widget_populer_posts ul li:last-child { margin: 0px;}
+/* popular post*/
+
+/*Gallery*/
+.widget-gallery,.widget-gallery a,.widget-gallery a img {
+    float: left;
+    width: 100%;
+}
+.widget-gallery ul { margin: 0px -5px;}
+.widget-gallery ul li {
+    float: left;
+    width: 33.3333%;
+    margin: 0px 0px 10px;
+    padding: 0px 5px;
+    list-style: none;
+}
+.widget-gallery a {
+    position: relative;
+    overflow: hidden;
+}
+.widget-gallery a:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.widget-gallery ul li:hover a:before { opacity: 0.9;}
+.widget-gallery a i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 16px;
+    color: #ffffff;
+    opacity: 0;
+    margin: -7px 0px 0px -4px;
+}
+.widget-gallery ul li:hover a i { opacity: 1; }
+
+/*Blog Grid*/
+.careplus-blog-grid figure a,.careplus-blog-grid figure a img,.careplus-blog-grid-text {
+    float: left;
+    width: 100%;
+}
+.careplus-blog-grid figure { margin: 0px;}
+.careplus-blog-grid figure > time {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 65px;
+    height: 65px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 20px;
+    padding: 12px 10px 0px;
+    opacity: 1;
+}
+.careplus-blog-grid ul li:hover figure > time { opacity: 0;}
+.careplus-blog-grid figure a {
+    position: relative;
+    overflow: hidden;
+}
+.careplus-blog-grid figure a:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+}
+.careplus-blog-grid ul li:hover figure a:before { opacity: 1; height: 100%;}
+.careplus-blog-grid figure a span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 18px;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    padding: 13px 0px 0px;
+    margin: -27px 0px 0px -27px;
+    opacity: 0;
+}
+.careplus-blog-grid ul li:hover figure a span { opacity: 1;}
+.careplus-blog-grid figure a span:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 1px;
+}
+.careplus-blog-grid ul li:hover figure a span:before { width: 64px;}
+.careplus-blog-grid figure a span:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 0px;
+}
+.careplus-blog-grid ul li:hover figure a span:after { height: 63px;}
+.careplus-blog-grid figure a span small {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.careplus-blog-grid figure a span small:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 0px;
+    height: 1px;
+}
+.careplus-blog-grid ul li:hover figure a span small:before { width: 64px;}
+.careplus-blog-grid figure a span small:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 1px;
+    height: 0px;
+}
+.careplus-blog-grid ul li:hover figure a span small:after { height: 63px;}
+.careplus-blog-grid-text {
+    position: relative;
+    background-color: #f5f5f5;
+    border-bottom: 5px solid #eeeeee;
+    padding: 28px 16px 30px 30px;
+    position: relative;
+}
+.careplus-blog-grid-text:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-bottom: 30px solid #eeeeee;
+    border-left: 30px solid transparent;
+}
+.careplus-blog-grid-text h5 {
+    margin: 0px 0px 0px;
+    font-weight: bold;
+    line-height: 18px;
+}
+.careplus-blog-grid-text p {
+    margin: 0px 0px 23px;
+    color: #686868;
+    float: left;
+}
+.careplus-blog ul li:hover .careplus-blog-grid-text .careplus-readmore-btn:before,
+.careplus-blog ul li:hover .careplus-blog-grid-text .careplus-readmore-btn span:before { width: 106%;}
+.careplus-blog ul li:hover .careplus-blog-grid-text .careplus-readmore-btn:after,
+.careplus-blog ul li:hover .careplus-blog-grid-text .careplus-readmore-btn span:after { height: 119%;}
+.careplus-blog ul li:hover .careplus-blog-grid-text .careplus-readmore-btn { background-color: transparent;}
+.careplus-blog-grid-option {
+    float: left;
+    width: 100%;
+    margin: 0px 0px 8px;
+}
+.careplus-blog-grid-option li {
+    float: left;
+    list-style: none;
+    margin: 0px 3px 0px 0px; 
+}
+.careplus-blog-grid-option li a {
+    font-size: 12px;
+    color: #868686;
+}
+/*pagination*/
+.careplus-pagination,.careplus-pagination > ul {
+    float: left;
+    width: 100%;
+}
+.careplus-pagination {
+    margin: 50px 0 36px;
+    text-align: center;
+}
+.careplus-pagination > ul > li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 11px 0 0;
+}
+.careplus-pagination > ul > li > .next     { padding: 7px 10px 4px 11px;}
+.careplus-pagination > ul > li > .previous,
+.careplus-pagination > ul > li > .next {
+    line-height: 1.4;
+    position: relative;
+}
+.careplus-pagination > ul > li > .previous > span,.careplus-pagination > ul > li > .next > span {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 80%;
+}
+.careplus-pagination > ul > li > .previous span:before,.careplus-pagination > ul > li > .next span:before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    bottom: -1px;
+    width: 5px;
+    height: 1px;
+    background-color: #ececec;
+}
+.careplus-pagination > ul > li > .previous span:after,.careplus-pagination > ul > li > .next span:after {
+    content: '';
+    position: absolute;
+    left: -1px;
+    bottom: -5px;
+    width: 1px;
+    height: 5px;
+    background-color: #ececec;
+}
+.careplus-pagination > ul > li:hover > .previous,
+.careplus-pagination > ul > li:hover > .next { color: #ffffff;}
+.careplus-pagination > ul > li > .previous { padding: 7px 9px 4px 10px;}
+.careplus-pagination > ul > li > .previous:before,.careplus-pagination > ul > li > .next:before {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: -1px;
+    width: 5px;
+    height: 1px;
+    background-color: #ececec;
+}
+.careplus-pagination > ul > li > .previous:after,.careplus-pagination > ul > li > .next:after {
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: -5px;
+    width: 1px;
+    height: 5px;
+    background-color: #ececec;
+}
+.careplus-pagination > ul > li > a,.careplus-pagination > ul > li > span {
+    border: 1px solid #ececec;
+    color: #888888;
+    font-size: 16px;
+    float: left;
+    height: 40px;
+    line-height: 1.6;
+    padding: 7px 11px;
+    width: 40px;
+}
+/*pagination*/
+
+/*Blog Large*/
+.careplus-blog-large figure,.careplus-blog-large figure a,.careplus-blog-large a img,.careplus-blog-large-text {
+    float: left;
+    width: 100%;
+}
+.careplus-blog-large figure { margin: 0px;}
+.careplus-blog-large figure a {
+    position: relative;
+    overflow: hidden;
+}
+.careplus-blog-large figure a:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.careplus-blog-large ul li:hover figure a:before { opacity: 1;}
+.careplus-blog-large figure a span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 11px 0px 0px;
+    margin: -24px 0px 0px -27px;
+    opacity: 0;
+}
+.careplus-blog-large ul li:hover figure a span { opacity: 1;}
+.careplus-blog-large figure a span:before {
+    content: '';
+    position: absolute;
+    left: -100px;
+    top: 0px;
+    width: 0px;
+    height: 1px;
+}
+.careplus-blog-large ul li:hover figure a span:before { left: 0px; width: 57px;}
+.careplus-blog-large figure a span:after {
+    content: '';
+    position: absolute;
+    left: -100px;
+    top: 0px;
+    width: 1px;
+    height: 0px;
+}
+.careplus-blog-large ul li:hover figure a span:after { left: 0px; height: 57px;}
+.careplus-blog-large figure a span small {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.careplus-blog-large figure a span small:before {
+    content: '';
+    position: absolute;
+    right: -100px;
+    bottom: 0px;
+    width: 0px;
+    height: 1px;
+}
+.careplus-blog-large ul li:hover figure a span small:before { right: 0px; width: 57px;}
+.careplus-blog-large figure a span small:after {
+    content: '';
+    position: absolute;
+    right: -100px;
+    bottom: 0px;
+    width: 1px;
+    height: 0px;
+}
+.careplus-blog-large ul li:hover figure a span small:after { right: 0px; height: 57px;}
+.careplus-blog-large .careplus-thumb-heading { background-color: #f5f5f5; margin: 0px 0px 22px;}
+.careplus-blog-large .careplus-blog-option li a i,.careplus-blog-large .careplus-blog-option li a {
+    color: #868686;
+}
+.careplus-blog-large-text p {
+    margin: 0px 0pc 29px;
+    letter-spacing: 0.9px;
+}
+.careplus-blog-large .careplus-readmore-btn {
+    letter-spacing: 1.1px;
+    font-size: 14px;
+    padding: 3px 21px 4px;
+    margin: 0px 0px 6px;
+}
+.careplus-blog ul li:hover .careplus-blog-large-text .careplus-readmore-btn:before,
+.careplus-blog ul li:hover .careplus-blog-large-text .careplus-readmore-btn span:before { width: 106%;}
+.careplus-blog ul li:hover .careplus-blog-large-text .careplus-readmore-btn:after,
+.careplus-blog ul li:hover .careplus-blog-large-text .careplus-readmore-btn span:after { height: 119%;}
+/*Blog Large*/
+
+/*Blog Medium*/
+.careplus-blog-medium figure a,.careplus-blog-medium figure a img {
+    float: left;
+    width: 100%;
+}
+.careplus-blog-medium figure > a {
+    position: relative;
+    overflow: hidden;
+}
+.careplus-blog-medium figure a:before {
+    content: '';
+    position: absolute;
+    right: 2px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+    border-right: 5px solid;
+}
+.careplus-blog-medium figure a:after {
+    border-right: 1px solid;
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    opacity: 0;
+    height: 100%;
+    z-index: 2;
+}
+.careplus-blog-medium ul li:hover figure a:before,.careplus-blog-medium ul li:hover figure a:after { opacity: 1;}
+.careplus-blog-medium figure {
+    float: left;
+    width: 243px;
+    margin: 0px;
+}
+.careplus-blog-medium figure:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+    border-top: 207px solid transparent;
+    border-right: 25px solid #f5f5f5;
+    border-bottom: 82px solid transparent;
+}
+.careplus-blog-medium figure:after {
+    background-color: #dddddd;
+    content: "";
+    height: 30%;
+    position: absolute;
+    right: 11px;
+    bottom: -2px;
+    width: 5px;
+    z-index: 1;
+}
+.careplus-blog-medium figure ~ .careplus-blog-medium-text { margin: 0px 0px 0px 243px;}
+.careplus-blog-medium-text {
+    background-color: #f5f5f5;
+    padding: 31px 17px 38px 30px;
+    position: relative;
+}
+.careplus-blog-medium-text:before {
+    background-color: #dddddd;
+    content: "";
+    height: 72%;
+    position: absolute;
+    left: -16px;
+    top: -1px;
+    width: 5px;
+    z-index: 1;
+}
+.careplus-blog-medium-text > span {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+}
+.careplus-blog-medium ul li:hover .careplus-blog-medium-text > span { opacity: 0;}
+.careplus-blog-medium-text > span:before {
+    background-color: #dddddd;
+    content: "";
+    height: 72%;
+    position: absolute;
+    right: 8px;
+    top: -1px;
+    width: 1px;
+    z-index: 1;
+}
+.careplus-blog-medium-text > span:after {
+    background-color: #dddddd;
+    content: "";
+    height: 30%;
+    position: absolute;
+    right: 8px;
+    bottom: -1px;
+    width: 1px;
+    z-index: 1;
+}
+.careplus-blog-medium-text h5 {
+    margin: 0px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+.careplus-blog-medium-text p {
+    margin: 0px 0px 29px;
+}
+.careplus-blog ul li:hover .careplus-blog-medium-text .careplus-readmore-btn:before,
+.careplus-blog ul li:hover .careplus-blog-medium-text .careplus-readmore-btn span:before { width: 106%;}
+.careplus-blog ul li:hover .careplus-blog-medium-text .careplus-readmore-btn:after,
+.careplus-blog ul li:hover .careplus-blog-medium-text .careplus-readmore-btn span:after { height: 119%;}
+.careplus-blog ul li:hover .careplus-blog-medium-text .careplus-readmore-btn { background-color: transparent;}
+.careplus-blog-medium figure a span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 14px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 11px 0px 0px;
+    margin: -25px 0px 0px -24px;
+    opacity: 0;
+    z-index: 3;
+}
+.careplus-blog-medium figure a span i {
+    -webkit-transform: scale(0);
+       -moz-transform: scale(0);
+        -ms-transform: scale(0);
+         -o-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: all 0.7s ease-in-out;
+       -moz-transition: all 0.7s ease-in-out;
+        -ms-transition: all 0.7s ease-in-out;
+         -o-transition: all 0.7s ease-in-out;
+            transition: all 0.7s ease-in-out;
+}
+.careplus-blog-medium ul li:hover figure a span i {
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+        -ms-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
+}
+.careplus-blog-medium ul li:hover figure a span { opacity: 1;}
+.careplus-blog-medium figure a span:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 1px;
+}
+.careplus-blog-medium ul li:hover figure a span:before { width: 55px;}
+.careplus-blog-medium figure a span:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 0px;
+}
+.careplus-blog-medium ul li:hover figure a span:after { height: 55px;}
+.careplus-blog-medium figure a span small {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.careplus-blog-medium figure a span small:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 0px;
+    height: 1px;
+}
+.careplus-blog-medium ul li:hover figure a span small:before { width: 55px;}
+.careplus-blog-medium figure a span small:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 1px;
+    height: 0px;
+}
+.careplus-blog-medium ul li:hover figure a span small:after { height: 55px;}
+/*Team Detail*/
+.careplus-team-detail-post {
+    float: left;
+    width: 100%;
+    margin: 0px 0px 39px;
+}
+.careplus-team-detail-post figure{
+    float: left;
+    width: 360px;
+    margin: 0px;
+}
+.careplus-team-post-text {
+    float: right;
+    width: 60%;
+    background-color: #f5f5f5;
+    padding: 27px 0px 16px 30px;
+    border-bottom: 8px solid #ebebeb;
+    position: relative;
+    margin: 30px 0px 0px -21px;
+}
+.careplus-team-post-text:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-bottom: 33px solid #ebebeb;
+    border-left: 33px solid transparent;
+}
+.careplus-team-post-text h5 {
+    margin: 0px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+.careplus-team-post-text > span {
+    font-size: 12px;
+    color: #666666;
+    display: inline-block;
+    margin: 0px 0px 18px;
+}
+.careplus-team-post-text p {
+    margin: 0px 0px 16px;
+    letter-spacing: 0.9px;
+}
+.careplus-team-post-text > ul {
+    float: left;
+    margin: 0px 0px 17px;
+    width: 100%;
+}
+.careplus-team-post-text > ul > li {
+    float: left;
+    width: 100%;
+    list-style: none;
+    font-size: 15px;
+    line-height: 1.8;
+}
+.careplus-team-post-text > ul > li span,.careplus-team-post-text > ul > li a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #686868;
+}
+.careplus-team-post-text > .careplus-footer-social { margin: 0px;}
+.careplus-team-post-text > .careplus-footer-social li {
+    width: auto;
+    margin: 0px 6px 0px 0px;
+}
+.careplus-team-post-text > .careplus-footer-social li a {
+    font-size: 18px;
+    color: #888888;
+}
+
+/*About Education*/
+.careplus-about-education,.careplus-about-education li {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+.careplus-about-education { margin: 0px 0px 19px;}
+.careplus-about-education:before {
+    content: '';
+    position: absolute;
+    background: url(images/about-education-shape.png);
+    left: 6px;
+    top: 0px;
+    width: 3px;
+    height: 74%;
+}
+.careplus-about-education li {
+    list-style: none;
+    margin: 0px 0px 23px;
+    padding: 0px 0px 0px 35px;
+}
+.careplus-about-education li:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+}
+.careplus-about-education li:after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    border: 3px solid #ffffff;
+    border-radius: 100%;
+    width: 13px;
+    height: 13px;
+}
+.careplus-about-education li h6 {
+    margin: 0px 0px 11px;
+    font-weight: bold;
+    line-height: 1;
+}
+.careplus-about-education li p {
+    margin: 0px;
+    letter-spacing: 0.8px;
+}
+
+/*Skill List*/
+.careplus-skills-achievements,.careplus-achievements-img {
+    float: left;
+    width: 100%;
+}
+.careplus-skills-achievements { margin: 0px 0px 41px;}
+.careplus-achievements-img { margin: 5px 0px 0px;}
+.careplus-skills-achievements p {
+    margin: 0px 0px 19px;
+}
+.careplus-skills-achievements .skillst h6 {
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0px 0px 6px;
+}
+.careplus-skills-achievements .skillst > span {
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+}
+.skillst {
+    float: left;
+    width: 100%;
+    margin-bottom: 24px;
+    position: relative;
+}
+.bar-container {
+    width: 100%;
+    float: left;
+    position:relative;
+}
+.bar-container .bar {
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.bar-container .bar:before {
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: -2px;
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    border: 2px solid;
+    border-radius: 100%;
+}
+.bar-container .bar small {
+    display: none;
+}
+/*Related Team*/
+.careplus-related-team figure,.careplus-related-team-text,.careplus-related-team figure a,.careplus-related-team figure a img {
+    float: left;
+    width: 100%;
+}
+.careplus-team.careplus-related-team > ul > li { margin: 0px 0px 50px;}
+.careplus-related-team figure { margin: 0px;}
+.careplus-related-team-text {
+    background-color: #f5f5f5;
+    position: relative;
+    text-align: center;
+    padding: 11px 0px 16px;
+    line-height: 1;
+}
+.careplus-related-team-text:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: -5px;
+    width: 50%;
+    height: 12px;
+    background-color: #f5f5f5;
+}
+.careplus-related-team-text:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: -5px;
+    width: 51%;
+    height: 12px;
+    background-color: #f5f5f5;
+}
+.careplus-related-team-text h6 {
+    margin: 0px 0px 2px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.careplus-related-team-text span {
+    font-weight: bold;
+    color: #868686;
+    font-size: 12px;
+    letter-spacing: 0.9px;
+}
+.careplus-related-team figure a {
+    position: relative;
+    overflow: hidden;
+}
+.careplus-related-team figure a:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    z-index: 1;
+}
+.careplus-related-team ul li:hover figure a:before { opacity: 1; height: 50%;}
+.careplus-related-team figure a:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+}
+.careplus-related-team ul li:hover figure a:after { opacity: 1; height: 50%;}
+.careplus-related-team figure a span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 11px 0px 0px;
+    margin: -25px 0px 0px -25px;
+    opacity: 0;
+    z-index: 1;
+}
+.careplus-related-team ul li:hover figure a span { opacity: 1;}
+.careplus-related-team figure a span:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: -100px;
+    width: 58px;
+    height: 1px;
+}
+.careplus-related-team ul li:hover figure a span:before { top: 0; }
+.careplus-related-team figure a span:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: -100px;
+    width: 1px;
+    height: 58px;
+}
+.careplus-related-team ul li:hover figure a span:after { top: 0; }
+.careplus-related-team figure a span small {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.careplus-related-team figure a span small:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: -100px;
+    width: 58px;
+    height: 1px;
+}
+.careplus-related-team ul li:hover figure a span small:before { bottom: 0px; }
+.careplus-related-team figure a span small:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: -100px;
+    width: 1px;
+    height: 58px;
+}
+.careplus-related-team ul li:hover figure a span small:after { bottom: 0px; }
+
+/*Team Grid*/
+.careplus-team-filterable {
+    text-align: center;
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    padding: 20px 0px 10px;
+}
+.careplus-team-filterable ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0px 19px 10px;
+}
+.careplus-team-filterable ul li a {
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    padding: 1px 16px 0px;
+    letter-spacing: 1px;
+}
+.careplus-team-filterable ul li a.is-checked {
+    color: #ffffff;
+}
+.careplus-team-filterable ul li a.is-checked:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid;
+    margin: 0px 0px 0px -5px;
+}
+/*Team List*/
+.careplus-team-list figure a,.careplus-team-list figure a img {
+    float: left;
+    width: 100%;
+}
+.careplus-team-list figure a {
+    position: relative;
+    overflow: hidden;
+}
+.careplus-team-list figure a:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    border-right: 8px solid;
+    opacity: 0;
+}
+.careplus-team-list ul li:hover figure a:before {
+    opacity: 1;
+    width: 100%;
+}
+.careplus-team-list figure {
+    float: left;
+    width: 293px;
+    margin: 0px;
+    overflow: hidden;
+}
+.careplus-team-list figure:before {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: -2px;
+    height: 53%;
+    width: 23px;
+    z-index: 1;
+    background-color: #f5f5f5;
+}
+.careplus-team-list figure:after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    bottom: -3px;
+    height: 53%;
+    width: 23px;
+    background-color: #f5f5f5;
+}
+.careplus-team-list figure ~ .careplus-team-list-text { margin: 0px 0px 0px 293px;}
+.careplus-team-list-text {
+    background-color: #f5f5f5;
+    padding: 0px;
+    line-height: 1;
+    padding: 24px 0px 34px 38px;
+    position: relative;
+}
+.careplus-team-list-text:before {
+    content: '';
+    position: absolute;
+    left: -19px;
+    top: 0px;
+    height: 52%;
+    width: 8px;
+    background-color: #e0e0e0;
+}
+.careplus-team-list-text:after {
+    content: '';
+    position: absolute;
+    left: -19px;
+    bottom: -1px;
+    height: 50%;
+    width: 8px;
+    background-color: #e0e0e0;
+}
+.careplus-team-list-text h5 {
+    margin: 0px;
+    font-weight: bold;
+}
+.careplus-team-list-text > span {
+    font-size: 12px;
+    display: inline-block;
+    margin: 0px 0px 21px;
+    color: #868686;
+    letter-spacing: 0.8px;
+}
+.careplus-team-list-text p { margin: 0px 0px 28px;}
+.careplus-team-list-text .careplus-readmore-btn {
+    line-height: 2;
+    padding: 3px 23px 5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.careplus-team ul li:hover .careplus-team-list-text .careplus-readmore-btn:before,
+.careplus-team ul li:hover .careplus-team-list-text .careplus-readmore-btn span:before { width: 106%;}
+.careplus-team ul li:hover .careplus-team-list-text .careplus-readmore-btn:after,
+.careplus-team ul li:hover .careplus-team-list-text .careplus-readmore-btn span:after { height: 119%;}
+.careplus-team ul li:hover .careplus-team-list-text .careplus-readmore-btn { background-color: transparent;}
+.careplus-team-list figure a span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 11px 0px 0px;
+    margin: -25px 0px 0px -25px;
+    opacity: 0;
+    z-index: 1;
+}
+.careplus-team-list ul li:hover figure a span { opacity: 1; }
+.careplus-team-list figure a span:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 58px;
+    height: 1px;
+}
+.careplus-team-list figure a span:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 58px;
+}
+.careplus-team-list figure a span small {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.careplus-team-list figure a span small:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 58px;
+    height: 1px;
+}
+.careplus-team-list figure a span small:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 1px;
+    height: 58px;
+}
+/*Shop Detail*/
+.careplus-shopwrap,.careplus-shop-option,.careplus-select {
+    float: left;
+    width: 100%;
+}
+.careplus-shopwrap { margin: 0px 0px 100px;}
+.careplus-shopwrap figure {
+    float: left;
+    width: 360px;
+    margin: 0px;
+}
+.careplus-shop-detail-text {
+    float: left;
+    width: 57%;
+    padding: 9px 0px 0px 30px;
+}
+.careplus-shop-detail-text h4 {
+    margin: 0px 0px 1px;
+    font-weight: bold;
+}
+.star-rating {
+    width: 18%;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    margin: 0px 2px 16px 0px;
+}
+.star-rating:before,.star-rating-box:before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+    font-family: FontAwesome;
+    font-size: 12px;
+    left: 0px;
+    letter-spacing: 4px;
+    position: absolute;
+    top: 0px;
+    color: #efb63c;
+}
+.star-rating-box:before                                                 { content: "\f005 \f005 \f005 \f005 \f005";}
+.star-rating > .star-rating-box {
+    height: 20px;
+    left: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+}
+.careplus-shop-detail-text small {
+    font-size: 12px;
+    color: #888888;
+}
+.careplus-shop-detail-text > span {
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    width: 100%;
+    margin: 0px 0px 15px;
+}
+.careplus-shop-detail-text > span del {
+    color: #888888;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0px 5px 0px 0px;
+}
+.careplus-shop-detail-text p {
+    margin: 0px 0px 20px;
+    letter-spacing: 0.9px;
+    float: left;
+}
+.careplus-shop-option { margin: 0px 0px 17px;}
+.careplus-shop-option li {
+    float: left;
+    list-style: none;
+    margin: 0px 25px 10px 0px;
+}
+.careplus-shop-option li:last-child { margin-right: 0px;}
+.careplus-shop-option li span {
+    float: left;
+    margin: 0px 12px 0px 0px;
+}
+.careplus-shop-option li span i {
+    font-size: 13px;
+    margin: 0px 6px 0px 0px;
+}
+.careplus-shop-option li a {
+    float: left;
+    font-size: 12px;
+    color: #666666;
+    margin: 0px 6px 0px 0px;
+}
+.careplus-shop-detail-text .careplus-readmore-btn {
+    line-height: 2;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 6px 31px;
+    letter-spacing: 1px;
+}
+/* Shop Tabs */
+.careplus-shop-tabs {
+    float: left;
+    width: 100%;
+}
+.careplus-shop-tabs .nav-tabs {
+    float: left;
+    width: 100%;
+    border-radius: 0px;
+    border: none;
+}
+.careplus-shop-tabs .nav-tabs > li > a {
+    border-radius: 0;
+    margin: 0;
+    border: none;
+    position: relative;
+}
+.careplus-shop-tabs .nav-tabs > li:last-child > a:before {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: -1px;
+    width: 6px;
+    height: 1px;
+}
+.careplus-shop-tabs .nav-tabs > li:last-child > a:after {
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: -6px;
+    width: 1px;
+    height: 6px;
+}
+.careplus-shop-tabs .nav-tabs > li:first-child > a:before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    bottom: -1px;
+    width: 6px;
+    height: 1px;
+}
+.careplus-shop-tabs .nav-tabs > li:first-child > a:after {
+    content: '';
+    position: absolute;
+    left: -1px;
+    bottom: -6px;
+    width: 1px;
+    height: 6px;
+}
+.careplus-shop-tabs .nav-tabs li {
+    list-style: none;
+    line-height: 1;
+    margin: 0 0px 0 0;
+}
+.careplus-shop-tabs .nav-tabs > li.active > a,
+.careplus-shop-tabs .nav-tabs > li.active > a:hover,
+.careplus-shop-tabs .nav-tabs > li.active > a:focus {
+    border: 1px solid;
+    color: #fff;
+}
+.careplus-shop-tabs .nav-tabs li a {
+    float: left;
+    padding: 9px 28px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid;
+    position: relative;
+    letter-spacing: 1px;
+}
+.careplus-shop-tabs .nav-tabs > li > a:hover { border: 1px solid; }
+.careplus-shop-tabs .tab-content {
+    display: inline-block;
+    width: 100%;
+    padding-top: 40px;
+}
+.careplus-shop-tabs .tab-content .comment-respond { margin: 0px 0px 13px;}
+.careplus-description p {
+    margin: 0;
+    line-height: 24px;
+}
+.careplus-description {
+    float: left;
+    width: 100%;
+    margin: 0px 0px 50px;
+}
+/*Related Product*/
+.careplus-shop,.careplus-related-products figure,.careplus-related-products figure a,
+.careplus-related-products figure a img,.careplus-related-products-text {
+    float: left;
+    width: 100%;
+}
+.careplus-shop > ul > li {
+    list-style: none;
+    margin: 0px 0px 30px;
+}
+.careplus-related-products figure a {
+    position: relative;
+    overflow: hidden;
+}
+.careplus-related-products figure a:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+}
+.careplus-related-products ul li:hover figure a:before {
+    opacity: 1;
+    height: 100%;
+}
+.careplus-related-products figure a span {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 11px 0px 0px;
+    margin: 0px 0px -25px -25px;
+    opacity: 0;
+}
+.careplus-related-products ul li:hover figure a span {
+    opacity: 1;
+    bottom: 50%;
+}
+.careplus-related-products figure a span:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 55px;
+    height: 1px;
+}
+.careplus-related-products figure a span:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 55px;
+}
+.careplus-related-products figure a span small {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.careplus-related-products figure a span small:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 55px;
+    height: 1px;
+}
+.careplus-related-products figure a span small:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 1px;
+    height: 55px;
+}
+.careplus-related-products figure { margin: 0px;}
+.careplus-related-products-text {
+    border: 1px solid #f3f3f3;
+    text-align: center;
+    line-height: 1;
+    padding: 18px 0px 24px;
+    position: relative;
+}
+.careplus-related-products figure:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    width: 50%;
+    height: 0px;
+    background-color: #ffffff;
+    z-index: 1;
+}
+.careplus-related-products figure:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: -5px;
+    width: 51%;
+    height: 0px;
+    background-color: #ffffff;
+    z-index: 1;
+}
+.careplus-related-products ul li:hover figure:before,.careplus-related-products ul li:hover figure:after { height: 10px;}
+.careplus-related-products-text h5 {
+    margin: 0px;
+    font-weight: bold;
+}
+.careplus-related-products-text small {
+    letter-spacing: 0.8px;
+    color: #868686;
+    font-size: 12px;
+    display: inline-block;
+    margin: 0px 0px 14px;
+}
+.careplus-related-products-text span {
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    width: 100%;
+}
+.careplus-related-products-text span del {
+    color: #888888;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0 5px 0 0;
+}
+
+/*Shop Grid*/
+.careplus-shop-grid figure,.careplus-shop-grid figure a,.careplus-shop-grid figure a img,.careplus-shop-grid-text {
+    float: left;
+    width: 100%;
+}
+.careplus-shop-grid figure a {
+    position: relative;
+    overflow: hidden;
+}
+.careplus-shop-grid figure a:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+}
+.careplus-shop-grid ul li:hover figure a:before {
+    opacity: 1;
+    height: 100%;
+}
+.careplus-shop-grid figure a span {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 11px 0px 0px;
+    margin: 0px 0px -25px -25px;
+    opacity: 0;
+}
+.careplus-shop-grid ul li:hover figure a span {
+    opacity: 1;
+    bottom: 50%;
+}
+.careplus-shop-grid figure a span:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 55px;
+    height: 1px;
+}
+.careplus-shop-grid figure a span:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 55px;
+}
+.careplus-shop-grid figure a span small {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.careplus-shop-grid figure a span small:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 55px;
+    height: 1px;
+}
+.careplus-shop-grid figure a span small:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 1px;
+    height: 55px;
+}
+.careplus-shop-grid figure { margin: 0px;}
+.careplus-shop-grid-text {
+    border: 1px solid #f3f3f3;
+    line-height: 1;
+    padding: 19px 27px 31px 30px;
+    position: relative;
+}
+.careplus-shop-grid figure:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    width: 50%;
+    height: 0px;
+    background-color: #ffffff;
+    z-index: 1;
+}
+.careplus-shop-grid figure:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: -6px;
+    width: 51%;
+    height: 0px;
+    background-color: #ffffff;
+    z-index: 1;
+}
+.careplus-shop-grid ul li:hover figure:after,
+.careplus-shop-grid ul li:hover figure:before { height: 11px;}
+.careplus-shop-grid-text h5 {
+    margin: 0px 0px 5px;
+    font-weight: bold;
+}
+.careplus-shop-grid-text > span {
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    width: 100%;
+    margin: 0px 0px 18px;
+}
+.careplus-shop-grid-text span del {
+    color: #888888;
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0 0px 0 5px;
+}
+.careplus-shop-grid-text p {
+    margin: 0px 0px 23px;
+    letter-spacing: 0.8px;
+}
+.careplus-shop-grid-text .careplus-readmore-btn {
+    line-height: 2;
+    font-weight: 400;
+    letter-spacing: 1.1px;
+    padding: 3px 19px 5px;
+    font-size: 14px;
+}
+.careplus-shop ul li:hover .careplus-readmore-btn { color: #ffffff;}
+
+/*Shop List*/
+.careplus-shop-list figure a,.careplus-shop-list figure a img {
+    float: left;
+    width: 100%;
+}
+.careplus-shop-list figure a {
+    position: relative;
+    overflow: hidden;
+}
+.careplus-shop-list figure a:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 0%;
+    height: 100%;
+    border-right: 6px solid;
+    opacity: 0;
+    z-index: 2;
+}
+.careplus-shop-list ul li:hover figure a:before {
+    opacity: 1;
+    width: 100%;
+}
+.careplus-shop-list figure {
+    float: left;
+    width: 293px;
+    margin: 0px;
+    border: 1px solid #ececec;
+}
+.careplus-shop-list ul li:hover figure { border-color: #ffffff;}
+.careplus-shop-list figure:before {
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: 0px;
+    z-index: 1;
+    border-top: 178px solid transparent;
+    border-right: 21px solid #f5f5f5;
+    border-bottom: 81px solid transparent;
+}
+.careplus-shop-list figure ~ .careplus-shop-list-text { margin: 0px 0px 0px 293px;}
+.careplus-shop-list-text {
+    background-color: #f5f5f5;
+    padding: 0px;
+    line-height: 1;
+    padding: 23px 0px 31px 38px;
+    position: relative;
+}
+.careplus-shop-list-text:before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: -1px;
+    height: 70%;
+    width: 6px;
+    background-color: #e0e0e0;
+}
+.careplus-shop-list-text:after {
+    background-color: #e0e0e0;
+    bottom: -1px;
+    content: "";
+    height: 33%;
+    left: -16px;
+    position: absolute;
+    width: 6px;
+}
+.careplus-shop-list-text h5 {
+    margin: 0px 0px 7px;
+    font-weight: bold;
+}
+.careplus-shop-list-text > span {
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    width: 100%;
+    margin: 0px 0px 23px;
+}
+.careplus-shop-list-text span del {
+    color: #888888;
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0 0px 0 5px;
+}
+.careplus-shop-list-text p { margin: 0px 0px 23px;}
+.careplus-shop-list-text .careplus-readmore-btn {
+    line-height: 2;
+    padding: 4px 23px 5px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.1px;
+}
+.careplus-shop ul li:hover .careplus-shop-list-text .careplus-readmore-btn:before,
+.careplus-shop ul li:hover .careplus-shop-list-text .careplus-readmore-btn span:before { width: 106%;}
+.careplus-shop ul li:hover .careplus-shop-list-text .careplus-readmore-btn:after,
+.careplus-shop ul li:hover .careplus-shop-list-text .careplus-readmore-btn span:after { height: 119%;}
+.careplus-shop-list figure a span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 11px 0px 0px;
+    margin: -25px 0px 0px -25px;
+    opacity: 0;
+    z-index: 3;
+}
+.careplus-shop-list ul li:hover figure a span { opacity: 1; }
+.careplus-shop-list figure a span:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 55px;
+    height: 1px;
+}
+.careplus-shop-list figure a span:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 55px;
+}
+.careplus-shop-list figure a span small {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.careplus-shop-list figure a span small:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 55px;
+    height: 1px;
+}
+.careplus-shop-list figure a span small:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 1px;
+    height: 55px;
+}
+/*Department Grid*/
+.careplus-department,.careplus-department-grid,.careplus-department-grid figure,.careplus-department-grid figure a,
+.careplus-department-grid figure a img,.careplus-department-grid-text {
+    float: left;
+    width: 100%;
+}
+.careplus-department > ul > li {
+    list-style: none;
+    margin: 0px 0px 30px;
+}
+.careplus-department-grid figure a {
+    overflow: hidden;
+    position: relative;
+}
+.careplus-department-grid figure a:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    border-bottom: 6px solid;
+    z-index: 2;
+}
+.careplus-department-grid ul li:hover figure a:before { height: 100%; opacity: 1;}
+.careplus-department-grid figure { margin: 0px;}
+.careplus-department-grid figure:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -13px;
+    width: 76%;
+    height: 22px;
+    background-color: #f5f5f5;
+    z-index: 1;
+}
+.careplus-department-grid figure:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: -11px;
+    width: 26%;
+    height: 22px;
+    background-color: #f5f5f5;
+    z-index: 1;
+}
+.careplus-department-grid-text {
+    background-color: #f5f5f5;
+    padding: 24px 20px 35px 30px;
+    position: relative;
+    line-height: 1;
+}
+.careplus-department-grid-text:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: -12px;
+    width: 77%;
+    height: 6px;
+    z-index: 1;
+    background-color: #dfdfdf;
+}
+.careplus-department-grid-text:after {
+    background-color: #dfdfdf;
+    content: "";
+    height: 6px;
+    position: absolute;
+    right: -2px;
+    top: -11px;
+    width: 25%;
+    z-index: 1;
+}
+.careplus-department-grid ul li:hover .careplus-department-grid-text:before,
+.careplus-department-grid ul li:hover .careplus-department-grid-text:after { opacity: 0;}
+.careplus-department-grid-text h5 {
+    text-transform: uppercase;
+    margin: 0px 0px 1px;
+    font-weight: bold;
+}
+.careplus-department-grid-text > span {
+    color: #868686;
+    font-size: 12px;
+    margin: 0px 0px 16px;
+    display: inline-block;
+    letter-spacing: 1.1px;
+}
+.careplus-department-grid-text p {
+    color: #686868;
+    margin: 0px 0px 23px;
+    letter-spacing: 0.8px;
+}
+.careplus-department-grid-text i {
+    font-size: 65px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    opacity: 0.10;
+}
+.careplus-department-grid-text .careplus-readmore-btn {
+    line-height: 2;
+    padding: 5px 21px;
+    letter-spacing: 1px;
+}
+.careplus-department ul li:hover .careplus-department-grid-text .careplus-readmore-btn { background-color: transparent;}
+.careplus-department ul li:hover .careplus-department-grid-text .careplus-readmore-btn:before,
+.careplus-department ul li:hover .careplus-department-grid-text .careplus-readmore-btn span:before { width: 106%;}
+.careplus-department ul li:hover .careplus-department-grid-text .careplus-readmore-btn:after,
+.careplus-department ul li:hover .careplus-department-grid-text .careplus-readmore-btn span:after { height: 119%;}
+.careplus-department-grid figure a span {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 11px 0px 0px;
+    margin: 0px 0px -22px -25px;
+    opacity: 0;
+    z-index: 3;
+}
+.careplus-department-grid ul li:hover figure a span {
+    opacity: 1;
+    bottom: 50%;
+}
+.careplus-department-grid figure a span:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 55px;
+    height: 1px;
+}
+.careplus-department-grid figure a span:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 55px;
+}
+.careplus-department-grid figure a span small {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.careplus-department-grid figure a span small:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 55px;
+    height: 1px;
+}
+.careplus-department-grid figure a span small:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 1px;
+    height: 55px;
+}
+
+/*Department List*/
+.careplus-department-list figure a,.careplus-department-list figure a img {
+    float: left;
+    width: 100%;
+}
+.careplus-department-list figure a {
+    overflow: hidden;
+    position: relative;
+}
+.careplus-department-list figure a:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 0%;
+    height: 100%;
+    opacity: 0;
+}
+.careplus-department-list ul li:hover figure a:before {
+    opacity: 1;
+    width: 100%;
+}
+.careplus-department-list figure a > span {
+    position: absolute;
+    left: 0%;
+    bottom: 50%;
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 11px 0px 0px;
+    margin: 0px 0px -25px -25px;
+    opacity: 0;
+    z-index: 1;
+}
+.careplus-department-list ul li:hover figure a > span {
+    opacity: 1;
+    left: 50%;
+}
+.careplus-department-list figure a > span:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 55px;
+    height: 1px;
+}
+.careplus-department-list figure a > span:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 55px;
+}
+.careplus-department-list figure a > span small {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.careplus-department-list figure a > span small:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 55px;
+    height: 1px;
+}
+.careplus-department-list figure a > span small:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 1px;
+    height: 55px;
+}
+.careplus-department-list figure {
+    float: left;
+    width: 290px;
+    margin: 0px;
+}
+.careplus-department-list figure:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: #e0e0e0;
+    width: 6px;
+    height: 70%;
+    z-index: 1;
+}
+.careplus-department-list ul li:hover figure:before {
+    right: 2px;
+}
+.careplus-department-list figure:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background-color: #e0e0e0;
+    width: 6px;
+    height: 32%;
+    z-index: 1;
+}
+.careplus-department-list ul li:hover figure:after {
+    right: 2px;
+}
+.careplus-department-list figure > span {
+    position: absolute;
+    right: -2px;
+    top: 0px;
+    height: 100%;
+    z-index: 1;
+}
+.careplus-department-list figure > span:before {
+    content: '';
+    position: absolute;
+    right: -2px;
+    top: 0px;
+    background-color: #e0e0e0;
+    width: 2px;
+    height: 70%;
+}
+.careplus-department-list ul li:hover figure > span:before {
+    right: 0px;
+}
+.careplus-department-list figure > span:after {
+    content: '';
+    position: absolute;
+    right: -2px;
+    bottom: 0px;
+    background-color: #e0e0e0;
+    width: 2px;
+    height: 32%;
+}
+.careplus-department-list ul li:hover figure > span:after {
+    right: 0px;
+}
+.careplus-department-list figure ~ .careplus-department-list-text { margin: 0px 0px 0px 290px;}
+.careplus-department-list-text {
+    line-height: 1;
+    background-color: #f5f5f5;
+    padding: 24px 30px 34px;
+    position: relative;
+}
+.careplus-department-list-text:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 5px;
+    height: 70%;
+    background-color: #f5f5f5;
+}
+.careplus-department-list-text:after {
+    content: '';
+    position: absolute;
+    left: -1px;
+    bottom: 0px;
+    width: 6px;
+    height: 32%;
+    background-color: #f5f5f5;
+}
+.careplus-department-list ul li:hover .careplus-department-list-text:before,
+.careplus-department-list ul li:hover .careplus-department-list-text:after { width: 0px;}
+.careplus-department-list-text h5 {
+    text-transform: uppercase;
+    margin: 0px 0px 0px;
+    font-weight: bold;
+}
+.careplus-department-list-text > span {
+    color: #868686;
+    font-size: 12px;
+    margin: 0px 0px 21px;
+    display: inline-block;
+    letter-spacing: 1.1px;
+}
+.careplus-department-list-text p {
+    color: #686868;
+    margin: 0px 0px 28px;
+    letter-spacing: 0.8px;
+}
+.careplus-department-list-text i {
+    font-size: 65px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    opacity: 0.10;
+}
+.careplus-department-list-text .careplus-readmore-btn {
+    line-height: 2;
+    padding: 5px 21px;
+    letter-spacing: 1px;
+}
+.careplus-department ul li:hover .careplus-department-list-text .careplus-readmore-btn { background-color: transparent;}
+.careplus-department ul li:hover .careplus-department-list-text .careplus-readmore-btn:before,
+.careplus-department ul li:hover .careplus-department-list-text .careplus-readmore-btn span:before { width: 106%;}
+.careplus-department ul li:hover .careplus-department-list-text .careplus-readmore-btn:after,
+.careplus-department ul li:hover .careplus-department-list-text .careplus-readmore-btn span:after { height: 119%;}
+/*Appointment Request Form*/
+.careplus-appointment-request-form,.careplus-appointment-request-form form,.careplus-appointment-request-form form ul li input[type="text"],
+.careplus-appointment-request-form form ul li input[type="email"],.careplus-appointment-request-form form ul li textarea {
+    float: left;
+    width: 100%;
+}
+.careplus-appointment-request-form form ul { margin: 0px -15px;}
+.careplus-appointment-request-form form ul li {
+    float: left;
+    width: 33.3333%;
+    list-style: none;
+    padding: 0px 15px;
+    margin: 0px 0px 30px;
+    line-height: 1;
+}
+.careplus-appointment-request-form form ul li span {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.careplus-appointment-request-form form ul li.careplus-appointment-fullform { width: 100%;}
+.careplus-appointment-request-form form ul li input[type="text"],
+.careplus-appointment-request-form form ul li input[type="email"] {
+    background-color: transparent;
+    border: 1px solid #ececec;
+    height: 45px;
+    color: #999999;
+    font-style: italic;
+    font-size: 12px;
+    padding-left: 15px;
+}
+.careplus-appointment-request-form form ul li textarea {
+    background-color: transparent;
+    border: 1px solid #ececec;
+    height: 200px;
+    color: #3e3e3e;
+    padding-left: 15px;
+    font-size: 12px;
+    padding-top: 10px;
+}
+.careplus-days {
+    float: left;
+    width: 100%;
+}
+.careplus-select-day {
+    float: left;
+    width: 33.333%;
+    margin: 0px 0px 20px;
+}
+.careplus-select-day input[type="checkbox"] {
+    float: left;
+    margin: 2px 15px 0 0;
+}
+.careplus-select-day > label {
+    float: left;
+    margin: 0px;
+    font-size: 16px;
+    color: #576777;
+}
+.careplus-appointment-select select {
+    font-size: 12px;
+    border: none;
+    color: #999999;
+    background-color: #fff;
+    border: 1px solid #ececec;
+    height: 45px;
+    font-weight: 400;
+}
+.careplus-appointment-select                                     { position: relative;}
+.careplus-appointment-select:after {
+    content: "\f107";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: #999999;
+    right: 1px;
+    bottom: 1px;
+    text-align: center;
+    position: absolute;
+    pointer-events: none;
+    background-color: #fff;
+    width: 40px;
+    padding: 14px 2px 0 0;
+    height: 43px;
+}
+.careplus-appointment-request-form form ul li input[type="submit"] {
+    border: 1px solid;
+    color: #ffffff;
+    padding: 4px 17px 5px;
+}
+.careplus-appointment-request-form form ul li input[type="submit"]:hover {
+    background-color: #ffffff;
+}
+.careplus-appointment-request-form form ul li > label {
+    margin: 0px;
+    float: left;
+    position: relative;
+    line-height: 2;
+}
+.careplus-appointment-request-form form ul li > label:before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    bottom: 0px;
+    height: 1px;
+    width: 5px;
+}
+.careplus-appointment-request-form form ul li > label:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    height: 5px;
+    width: 1px;
+}
+.careplus-appointment-request-form form ul li label span {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.careplus-appointment-request-form form ul li label span:before {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 0px;
+    height: 1px;
+    width: 5px;
+}
+.careplus-appointment-request-form form ul li label span:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: -5px;
+    height: 5px;
+    width: 1px;
+}
+.careplus-radio-partition {
+    float: left;
+    margin-right: 20px;
+}
+.careplus-radio input[type="radio"]                                { display: none;}
+.careplus-radio input[type="radio"]:checked + label:before {
+    box-shadow: 0 0 0 1px #9bc03c inset;
+    background-color: #fff;
+}
+.careplus-radio label {
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 17px;
+    color: #576777;
+    position: relative;
+    font-size: 16px;
+}
+.careplus-radio label::before {
+    bottom: 3px;
+    content: "";
+    display: inline-block;
+    height: 8px;
+    left: 0;
+    margin-right: 9px;
+    position: absolute;
+    width: 8px;
+    border-radius: 100%;
+}
+
+/*Department Detail*/
+.careplus-department-thumb {
+    float: left;
+    width: 100%;
+    margin: 0px 0px 30px;
+}
+.careplus-department-liststyle,.careplus-department-skill,.careplus-department-form {
+    float: left;
+    width: 100%;
+}
+.careplus-department-liststyle li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px 0px 0px 30px;
+    margin: 0px 0px 23px;
+    position: relative;
+}
+.careplus-department-liststyle li i {
+    position: absolute;
+    left: 0px;
+    top: 2px;
+}
+.careplus-department-liststyle li h6 {
+    font-weight: bold;
+    line-height: 1;
+    margin: 0 0 11px;
+}
+.careplus-department-liststyle li p {
+    letter-spacing: 0.8px;
+    margin: 0;
+}
+.careplus-department-skill .skillst { margin: 0px 0px 30px;}
+.careplus-department-skill .skillst h6 {
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0px 0px 6px;
+}
+.careplus-department-skill .skillst > span {
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+}
+.careplus-department-form ul { margin: 0px -15px;}
+.careplus-department-form ul li {
+    float: left;
+    width: 50%;
+    padding: 0px 15px;
+    margin: 0px 0px 30px;
+    list-style: none;
+}
+.careplus-department-form ul li input[type="email"],
+.careplus-department-form ul li input[type="text"] {
+    float: left;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #ececec;
+    color: #999999;
+    font-size: 12px;
+    padding-left: 15px;
+    height: 45px;
+}
+.careplus-department-form ul li .careplus-appointment-select:after { padding: 7px 2px 0px 0px;}
+.careplus-department-form ul li textarea {
+    background-color: transparent;
+    height: 205px;
+    float: left;
+    width: 100%;
+    color: #3e3e3e;
+    padding-left: 15px;
+    font-size: 12px;
+    border: 1px solid #ececec;
+    padding-top: 10px;
+}
+.careplus-department-form ul li.fullform { width: 100%;}
+.careplus-department-form ul li input[type="submit"] {
+    border: 1px solid;
+    color: #ffffff;
+    padding: 5px 17px 6px;
+}
+.careplus-department-form ul li input[type="submit"]:hover {
+    background-color: #ffffff;
+}
+.careplus-department-form ul li > label {
+    margin: 0px;
+    float: left;
+    position: relative;
+    line-height: 2;
+}
+.careplus-department-form ul li > label:before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    bottom: 0px;
+    height: 1px;
+    width: 5px;
+}
+.careplus-department-form ul li > label:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    height: 5px;
+    width: 1px;
+}
+.careplus-department-form ul li label span {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.careplus-department-form ul li label span:before {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 0px;
+    height: 1px;
+    width: 5px;
+}
+.careplus-department-form ul li label span:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: -5px;
+    height: 5px;
+    width: 1px;
+}
+/* error 404 */
+.error-404-background {
+    background-image: url("extra-images/404-back-img.jpg");
+    padding-top: 149px;
+    padding-bottom: 148px;
+    position: relative;
+}
+.careplus-error-transparnt {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.6;
+}
+.careplus-error-page-wrap {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.careplus-error-page-text {
+    display: inline-block;
+    width: 54%;
+    padding: 39px 65px 68px;
+}
+.careplus-error-page-text h2 {
+    color: #ffffff;
+    font-size: 100px;
+    font-weight: bold;
+    margin: 0px 0px 3px;
+    line-height: 1.1;
+    letter-spacing: 5.7px;
+}
+.careplus-error-page-text h3 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 22px;
+    letter-spacing: 1.5px;
+}
+.careplus-error-page-text p {
+    color: #ffffff;
+    margin: 0px;
+    display: inline-block;
+    margin-bottom: 30px;
+    letter-spacing: 0.8;
+}
+.careplus-error-btn {
+    display: inline-block;
+    position: relative;
+    padding: 8px 20px 10px;
+    letter-spacing: 0.8px;
+}
+.careplus-error-btn:after {
+    content: '';
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 120%;
+    position: absolute;
+}
+.careplus-error-btn:before {
+    content: '';
+    right: 0px;
+    bottom: 0px;
+    width: 106%;
+    height: 1px;
+    position: absolute;
+}
+.careplus-error-btn span:after {
+    content: '';
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    width: 106%;
+    height: 1px;
+}
+.careplus-error-btn span:before {
+    content: '';
+    right: 0px;
+    bottom: 0px;
+    width: 1px;
+    height: 120%;
+    position: absolute;
+}
+
+/* search result */
+.careplus-search-result-text {
+    float: left;
+    width: 100%;
+    padding: 17px 30px 36px;
+    border-top: 6px solid;
+    position: relative;
+    margin-bottom: 48px;
+}
+.careplus-search-result-text:before {
+    content: '';
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-top: 25px solid; 
+    border-left: 25px solid transparent;
+}
+.careplus-search-result-text h3 {
+    color: #ffffff;
+    margin: 0px 0px 4px;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 2.6px;
+}
+.careplus-search-result-text p {
+    color: #ffffff;
+    margin: 0px 0px 24px;
+}
+.careplus-search-result-text form input[type="text"] {
+    float: left;
+    width: 100%;
+    height: 50px;
+    font-style: italic;
+    font-size: 12px;
+    background-color: #395e6f;
+    color: #e8e8e8;
+    margin-bottom: 30px;
+    padding: 0px 0px 0px 20px;
+    letter-spacing: 1px;
+}
+.careplus-search-result-text i {
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    color: #ffffff;
+    font-size: 90px;
+    opacity: 0.03;
+}
+.careplus-search-result-text form {
+    float: left;
+    width: 79%;
+}
+.careplus-search-result-text form label {
+    margin: 5px 0px 0px 6px;
+    position: relative;
+    display: inline-block;
+}
+.careplus-search-result-text form label:before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    bottom: 0px;
+    width: 6px;
+    height: 1px;
+}
+.careplus-search-result-text form label:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    width: 1px;
+    height: 6px;
+}
+.careplus-search-result-text form label span {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.careplus-search-result-text form label span:before {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 0px;
+    width: 6px;
+    height: 1px;
+}
+.careplus-search-result-text form label span:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: -6px;
+    width: 1px;
+    height: 6px;
+}
+.careplus-search-result-text form input[type="submit"] {
+    background-color: transparent;
+    padding: 2px 19px 3px;
+    line-height: 2;
+    border: 1px solid;
+}
+/* contact us */
+.careplus-content-space { padding: 100px 0px 0px;}
+.carepluss-contact-us-info {
+    float: left;
+    width: 100%;
+    margin-bottom: 70px;
+}
+.carepluss-contact-us-info ul li {
+    list-style: none;
+    margin: 0px 0px 30px;
+}
+.carepluss-info {
+    float: left;
+    width: 100%;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 23px 45px 26px;
+    position: relative;
+    line-height: 1;
+}
+.carepluss-info h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 9px;
+    text-transform: uppercase;
+}
+.carepluss-info p {
+    font-size: 15px;
+    color: #808080;
+    display: inline-block;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin: 0px;
+}
+.carepluss-info p a { color: #808080;}
+.carepluss-info span {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.carepluss-info span:before {
+    content: '';
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    border-top: 60px solid; 
+    border-right: 60px solid transparent; 
+}
+.carepluss-info i {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    color: #ffffff;
+    font-size: 35px;
+    opacity: 0.3;
+}
+.careplus-form-map #map { 
+    width: 100%;
+    height: 600px;
+}
+.careplus-map-form {
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    width: 100%;
+    padding: 16px 0px 6px;
+    margin: 0px;
+    border-top: 5px solid;
+    z-index: 2;
+    opacity: 0.9;
+}
+.careplus-map-form:before {
+    content: '';
+    right: 0px;
+    top: 0px;
+    width: 0; 
+    height: 0; 
+    border-top: 25px solid; 
+    border-left: 25px solid transparent;
+    position: absolute;
+}
+.careplus-map-form h4 {
+    margin: 0px 0px 21px;
+    padding: 0px 30px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+.careplus-map-form form {
+    float: left;
+    width: 100%;
+    padding: 40px 30px 0px;
+    border-top: 1px solid #627f8c;
+}
+.careplus-map-form form ul li {
+    list-style: none;
+    float: left;
+    width: 100%;
+    margin: 0px 0px 30px;
+}
+.careplus-map-form form ul li input[type="text"],
+.careplus-map-form form ul li input[type="email"] {
+    float: left;
+    width: 100%;
+    height: 40px;
+    font-style: italic;
+    padding-left: 15px;
+    background-color: #355a6b;
+    font-size: 12px;
+    color: #b5b5b5;
+}
+.careplus-map-form form ul .message-box textarea {
+    float: left;
+    width: 100%;
+    height: 140px;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 12px;
+    font-style: italic;
+    background-color: #355a6b;
+    color: #f3f3f3;
+}
+.careplus-map-form form ul li label {
+    margin: 5px 0px 0px 6px;
+    position: relative;
+    display: inline-block;
+}
+.careplus-map-form form ul li label:before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    bottom: 0px;
+    width: 6px;
+    height: 1px;
+    background-color: #ffffff;
+}
+.careplus-map-form form ul li label:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    width: 1px;
+    height: 6px;
+    background-color: #ffffff;
+}
+.careplus-map-form form ul li label span {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.careplus-map-form form ul li label span:before {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 0px;
+    width: 6px;
+    height: 1px;
+    background-color: #ffffff;
+}
+.careplus-map-form form ul li label span:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: -6px;
+    width: 1px;
+    height: 6px;
+    background-color: #ffffff;
+}
+.careplus-map-form form ul li input[type="submit"] {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 3px 25px 4px;
+    border: 1px solid #ffffff;
+}
+/* faq */
+.panel-group.faq-accordion {
+    float: left;
+    width: 100%;
+    margin: 0px 0px 100px;
+}
+.faq-accordion .panel-heading { padding: 0px 0px 0px 0px;}
+.faq-accordion .panel-group .panel {
+    border-radius: 0px;
+    box-shadow: none;
+}
+.faq-accordion .panel-default {
+    border: none;
+    float: left;
+    width: 100%;
+    box-shadow: none;
+    position: relative;
+}
+.faq-accordion .panel-default:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background-color: #ececec;
+    width: 100%;
+    height: 1px;
+}
+.faq-accordion .panel-default .collapsed {
+    display: inline-block;
+    background-color: #f5f5f5;
+    width: 100%;
+    color: #555555;
+    border-top: 6px solid #e5e5e5;
+}
+.faq-accordion .panel-default > .panel-heading {
+    color: #ffffff;
+    position: relative;
+    margin: 0px 0px 40px;
+}
+.faq-accordion .panel-default > .panel-heading:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ececec;
+    border-bottom: none;
+}
+.faq-accordion .panel-title a {
+    padding: 15px 28px 18px 57px;
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    border-top: 6px solid;
+    position: relative;
+}
+.faq-accordion .panel-title {
+    position: relative;
+    letter-spacing: 0.5px;
+}
+.faq-accordion .panel-title:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 0; 
+    height: 0; 
+    border-top: 40px solid #e5e5e5; 
+    border-left: 40px solid transparent;
+}
+.faq-accordion .panel-title a:before {
+     content: '';
+    position: absolute;
+    right: 0px;
+    top: -1px;
+    width: 0; 
+    height: 0; 
+    border-top: 40px solid; 
+    border-left: 40px solid transparent;
+    z-index: 1;
+}
+.faq-accordion .panel-title a.collapsed:before { content: none;}
+.faq-accordion .panel-title:before {
+    content: "\f107";
+    position: absolute;
+    left: 22px;
+    top: 22px;
+    font-family: 'FontAwesome';
+    color: #ffffff;
+}
+.faq-accordion .panel-title a.collapsed:after {
+    content: "\f29c";
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font-family: 'FontAwesome';
+    color: #555555; 
+}
+.faq-accordion .panel-body {
+    display: inline-block;
+    width: 100%;
+    padding: 18px 40px 19px 55px;
+    position: relative;
+    margin: -39px 0px 0px;
+}
+.faq-accordion .panel-body p {
+    margin: 0px;
+    letter-spacing: 0.9px;
+}
+.faq-accordion .panel-default > .panel-heading + .panel-collapse > .panel-body { border: 1px solid #ececec; border-top: none; border-bottom: none;}
+.panel-group.faq-accordion  .panel + .panel { margin-top: 24px;}
+/* Pricing Plan */
+
+.careplus-Pricing-Plan {
+    float: left;
+    width: 100%;
+    margin: 0px 0px 70px;
+}
+.careplus-Pricing-Plan > ul > li {
+    list-style: none;
+    margin: 0px 0px 30px;
+}
+.careplus-pricplan-wrap {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.careplus-pricplan-title {
+    float: left;
+    width: 100%;
+    padding: 21px 0px 18px;
+    text-align: center;
+    position: relative;
+}
+.careplus-pricplan-title:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -4px;
+    width: 85%; 
+    height: 11px;
+}
+.careplus-pricplan-title:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: -4px;
+    width: 16%; 
+    height: 11px;
+}
+.careplus-pricplan-title > span {
+    position: absolute;
+    bottom: -8px;
+    left: 0px;
+    width: 100%;
+    height: 7px;
+    z-index: 1;
+}
+.careplus-pricplan-title > span:before {
+    content: '';
+    left: 0px;
+    bottom: 0px;
+    width: 86%;
+    height: 7px;
+    position: absolute;
+}
+.careplus-pricplan-title > span:after {
+    content: '';
+    right: 0px;
+    bottom: 0px;
+    width: 15%;
+    height: 7px;
+    position: absolute;
+}
+.careplus-pricplan-title h3 {
+    margin: 0px 0px 7px;
+    color: #ffffff;
+    font-size: 22px;
+    display: inline-block;
+    width: 100%;
+    font-weight: bold;
+    position: relative;
+    text-transform: uppercase;
+}
+.careplus-pricplan-title h3:before {
+    content: '';
+    left: 50%;
+    bottom: -6px;
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    background-color: #194458;
+    margin-left: -25px;
+}
+.careplus-pricplan-title h4 {
+    margin: 0px;
+    font-size: 36px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 2.4px;
+}
+.careplus-pricplan-title > h4 > span {
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+.careplus-pricplan-list {
+    float: left;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ececec;
+    padding: 32px 67px 48px;
+}
+.careplus-pricplan-list ul {
+    margin: 0px 0px 19px;
+    display: inline-block;
+}
+.careplus-pricplan-list ul li {
+    list-style: none;
+    width: 100%;
+    float: left;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border-bottom: 1px solid #ececec;
+    padding: 11px 0px 12px;
+}
+.careplus-pricplan-list ul li:last-child { border-bottom: none;}
+.careplus-Pricing-Plan .careplus-error-btn { 
+    padding: 5px 32px 6px 32px;
+    font-size: 16px;
+    color: #868686;
+}
+.careplus-Pricing-Plan .careplus-error-btn span:after,.careplus-Pricing-Plan .careplus-error-btn span:before,
+.careplus-Pricing-Plan .careplus-error-btn:before,.careplus-Pricing-Plan .careplus-error-btn:after { background-color: #b3b3b3;}
+.careplus-Pricing-Plan ul li:hover .careplus-error-btn {
+    color: #ffffff;
+}
+
+/*Appointment*/
+.careplus-appointment-bord {
+    display: table;
+    border: 1px solid #ececec;
+    margin: 0px 0px 30px;
+}
+.careplus-appointment-bord ul { display: table-row;}
+.careplus-appointment-bord ul li {
+    display: table-cell;
+    list-style: none;
+    font-size: 16px;
+    padding: 0px;
+    border-bottom: 1px solid #ececec;
+    text-align: center;
+    border-right: 1px solid #ececec;
+}
+.careplus-appointment-bord ul.schedule-days li {
+    font-weight: bold;
+    color: #ffffff;
+    padding: 14px 26px;
+    border-bottom: 5px solid;
+    border-right: none;
+}
+.careplus-appointment-bord ul.schedule-days li:first-child {
+    background-color: transparent;
+    border-bottom: 1px solid #ececec;
+}
+.careplus-appointment-bord ul.schedule-days li > span {
+    font-size: 16px;
+    color: #555555;
+}
+.careplus-appointment-bord ul li time {
+    width: 97px;
+    display: inline-block;
+    padding: 22px 30px 20px;
+    text-align: center;
+    line-height: 1.4; 
+    font-size: 14px;
+}
+.careplus-doctor {
+    display: inline-block;
+    background-color: #f5f5f5;
+    line-height: 1;
+    padding: 8px 20px 17px;
+}
+.careplus-doctor h6 {
+    font-weight: bold;
+    margin: 0px 0px 4px;
+}
+.careplus-doctor > span {
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    margin: 0px 0px 9px;
+}
+.available-btn {
+    font-size: 12px;
+    display: inline-block;
+    color: #ffffff;
+    padding: 7px 16px 8px;
+    letter-spacing: 0.7px;
+    border-radius: 4px;
+}
+.careplus-appointment-bord ul li:hover .available-btn { color: #ffffff;}
+.available-btn.booked {
+    color: #ffffff;
+    background-color: #a5a5a5;
+    cursor: not-allowed;
+}
+.careplus-appointment-bord ul.border-none li { border-bottom: none;}
+
+
