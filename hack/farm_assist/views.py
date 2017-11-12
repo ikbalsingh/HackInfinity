@@ -43,7 +43,7 @@ def login_site(request):
 		user = authenticate(username = email, password = password)
 		if user:
 			login(request, user)
-			return redirect('/farmer_homepage/')
+			return redirect('/seeds/')
 		else:
 			return redirect('/login/')
 
