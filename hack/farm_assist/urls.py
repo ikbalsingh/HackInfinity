@@ -10,4 +10,6 @@ urlpatterns = [
     url(r'^fert/', views.fertilizer),
     url(r'^discuss/', views.discuss),
     url(r'^subs/',views.subs),
+    url(r'^disease/', views.disease),
+
 ]
