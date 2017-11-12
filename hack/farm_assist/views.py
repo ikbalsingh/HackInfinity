@@ -17,6 +17,22 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth import logout as auth_logout
 
 from django.http import JsonResponse
+from PIL import Image
+import numpy as np
+import os
+import random 
+from sklearn.svm import *
+# from xgboost import XGBClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
+from sklearn.cross_validation import train_test_split
+import pickle
+
+
+			# from sklearn.neural_network import MLPClassifier
+
 # Create your views here.
 
 
@@ -105,7 +121,95 @@ def discuss(request):
 def disease(request):
 	if request.user.is_authenticated():
 		if request.method == 'POST':
-			return HttpResponse("asdfasdf")
+			image = request.FILES['image']
+			print(image)
+
+
+
+
+
+			indir = '/home/deep/Desktop/hack_infinity/HackInfinity/hack/cotton-good/cotton crop images _ Google Search/'
+			x_train = []
+			y_train = []
+			for root, dirs, filenames in os.walk(indir):
+			    print("ASsadasd")
+			    for f in filenames:
+			        basewidth = 300
+			        img = Image.open(indir+f)
+			        img = img.resize((300,300), Image.ANTIALIAS)
+			        x = np.array(img)
+			        x = x.reshape((-1))
+			#         print(x)
+			        x = x.tolist()
+			        x_train.append(x)
+			        y_train.append(1)
+			# x_train = np.array(x_train)
+			print(np.array(x_train).shape)
+
+
+			indir = '/home/deep/Desktop/hack_infinity/HackInfinity/hack/cotton-bad/boll rot disease cotton images _ Google Search/'
+			for root, dirs, filenames in os.walk(indir):
+			    print("ASsadasd")
+			    for f in filenames:
+			        basewidth = 300
+			        img = Image.open(indir+f)
+			        img = img.resize((300,300), Image.ANTIALIAS)
+			        x = np.array(img)
+			        x = x.reshape((-1))
+			#         print(x)
+			        x = x.tolist()
+			        x_train.append(x)
+			        y_train.append(0)
+			# x_train = np.array(x_train)
+			print(np.array(x_train).shape)
+
+			# x_train,y_train
+
+			combined = list(zip(x_train,y_train))
+			random.shuffle(combined)
+			x_train[:] ,y_train[:] = zip(*combined)
+
+			xx_train,xx_test,yy_train,yy_test = train_test_split(x_train,y_train,test_size = 0.2)
+			len(yy_train)
+
+
+			# clf = MLPClassifier()
+			clf = KNeighborsClassifier()
+			for i in xx_train:
+			    if len(i) != 270000:
+			        xx_train.remove(i)
+			        yy_train.pop()
+			xx_train = np.array(xx_train)
+			yy_train = np.array(yy_train).reshape(-1,1)
+			clf.fit(xx_train,yy_train)
+			
+
+			
+
+
+			for i in xx_test:
+				if len(i) != 270000:
+					xx_test.remove(i)
+					yy_test.pop()
+
+
+
+			pred = clf.predict(xx_test)
+
+			print(accuracy_score(yy_test,pred))
+
+
+			image = Image.open(image)
+			print(image)
+			image = image.resize((300,300), Image.ANTIALIAS)
+			x = np.array(image)
+			x = x.reshape(1,-1)
+			print(x)	
+
+			pr = clf.predict(x)
+			print(pr)
+			return HttpResponse("qwes")	
+
 		else:
 			return render(request,'disease.html')
 	else:

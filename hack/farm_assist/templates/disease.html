@@ -35,13 +35,13 @@
 <div class="container">
 <div class="col-md-6">
     <div class="form-group">
-        <form action="/disease/" method="POST">
+        <form action="/disease/" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <label>Upload Image</label>
         <div class="input-group">
             <span class="input-group-btn">
                 <span class="btn btn-default btn-file">
-                    Browse… <input type="file" id="imgInp">
+                    Browse… <input type="file" name="image" id="imgInp">
                 </span>
             </span>
             <input type="text" class="form-control" readonly>
