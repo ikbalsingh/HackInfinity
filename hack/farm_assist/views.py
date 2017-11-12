@@ -111,6 +111,12 @@ def discuss(request):
 		return redirect('/login/')
 
 
+def subs(request):
+	if request.user.is_authenticated():
+		return render(request,'subs.html')
+	else:
+		return redirect('/login/')
+
 def discuss(request):
 	if request.user.is_authenticated():
 		return render(request,'discuss.html')
