@@ -12,6 +12,10 @@ urlpatterns = [
     url(r'^discuss/', views.discuss),
     url(r'^subs/',views.subs),
     url(r'^disease/', views.disease),
+    url(r'^loans/', views.loans),
+    url(r'^pred/', views.pred),
+
+
 
 
     url(r'^simulation/', views.simulation),
