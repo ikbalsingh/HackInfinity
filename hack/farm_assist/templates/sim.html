@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<form action="/simulation/" method="POST" >
+	{% csrf_token %}
+	<select class="form-control" name="crop" onchange="f();" id='drop' width='25%'>
+		<option value="wheat">Wheat</option>
+		<option value="cotton">Cotton</option>
+		<option value="wheat">Jowar</option>
+		<option value="cotton">Bajra</option>
+	</select>
+
+	<input id = "inp" type="number" name="area" placeholder="Enter Land Size">	
+
+	<button class="btn btn-primary" >Submit</button>
+
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 5px 0 0 0"></div>
+
+
+
+</form>
+<!-- <h1 id="h1">Total Profit : 2,64,300.00</h1> -->
+
+<script>
+	function f(){
+		Highcharts.chart('container', {
+    chart: {
+        type: 'line'
+    },
+    title: {
+        text: 'Average Annual Yield(Predicted)'
+    },
+    xAxis: {
+        categories: ['']
+    },
+    yAxis: {
+        title: {
+            text: 'Yield'
+        }
+    },
+    plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: true
+            },
+            enableMouseTracking: false
+        }
+    },
+    series: [{
+        name: 'Cotton',
+        data: [1117.38,1254.59,  1049.24,  1257.37  ,1252.99]
+    }, {
+        name: 'Wheat',
+        data: [880.72,  712.45,  803.39,  674.87,
+        748.19]
+    }]
+});
+	}
+		// document.getElementById('h1').innerText =
+</script>
+
+{% endblock %}

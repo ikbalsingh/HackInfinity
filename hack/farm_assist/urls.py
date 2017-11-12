@@ -4,6 +4,7 @@ from farm_assist import views
 
 urlpatterns = [
     url(r'^login/', views.login_site),
+    url(r'^logout/', views.logout_site),
     url(r'^register/', views.register),
     url(r'^farmer_homepage/', views.farmer_homepage),
     url(r'^seeds/', views.seeds),
@@ -15,5 +16,8 @@ urlpatterns = [
     url(r'^pred/', views.pred),
 
 
+
+
+    url(r'^simulation/', views.simulation),
 
 ]

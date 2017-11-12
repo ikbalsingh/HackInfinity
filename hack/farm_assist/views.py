@@ -31,6 +31,13 @@ from sklearn.cross_validation import train_test_split
 import pickle
 
 
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import preprocessing,linear_model
+from sklearn.model_selection import train_test_split
+
+
 			# from sklearn.neural_network import MLPClassifier
 
 # Create your views here.
@@ -44,6 +51,21 @@ def login_site(request):
 		if user:
 			login(request, user)
 			return redirect('/seeds/')
+		else:
+			return redirect('/login/')
+
+	else:	
+		return render(request, 'login.html')
+
+
+def logout_site(request):
+	if request.method == 'POST':
+		email = request.POST['email']
+		password = request.POST['password']
+		user = authenticate(username = email, password = password)
+		if user:
+			login(request, user)
+			return redirect('/farmer_homepage/')
 		else:
 			return redirect('/login/')
 
@@ -234,4 +256,53 @@ def pred(request):
 
 def loans(request):
 	return render(request,'loans.html')
+
+
+
+
+
+def simulation(request):
+	if request.user.is_authenticated():
+		if request.method == 'POST':
+
+			crop = request.POST['crop']
+			area = request.POST['area']
+
+			if crop == 'wheat':
+				data = pd.read_csv('wheatgood.csv', sep=",", header=None)
+				testdata = pd.read_csv('wheattest.csv',sep = ",",header=None)
+
+			elif crop == 'cotton':
+				data = pd.read_csv( 'cotton.csv', sep=",", header=None)
+				testdata = pd.read_csv('test_cotton.csv',sep = ",",header = None)
+
+			print(data)
+			data.columns = ["Rainfall", "Soil Moisture", "Temperature", "Yield"]
+			testdata.columns = ["Rainfall","Soil Moisture","Temperature"]
+			testdata = testdata.iloc[1:]
+			print(testdata.head())
+			# data.head()
+			X = np.array(data[["Rainfall","Soil Moisture","Temperature"]])
+			y = np.array(data["Yield"])
+			# print(testdata)
+			finaltest = np.array(testdata[["Rainfall", "Soil Moisture", "Temperature" ]])
+			print(finaltest)
+			# X = preprocessing.scale(X)
+			X_train,X_test,y_train,y_test = train_test_split(X,y,test_size = 0.2)
+
+
+			from sklearn import linear_model
+			clf = linear_model.LinearRegression()
+			clf.fit(X_train,y_train)
+
+			pred = clf.predict(finaltest)
+			print(pred)
+
+			return HttpResponse("Good Job!")
+
+		else:
+			return render(request,'sim.html')
+
+	else:
+		return redirect('/login/')
 
