@@ -62,7 +62,7 @@ def register(request):
 
 	
       
-		return Redirect('/login/')
+		return redirect('/login/')
 	else:
 		return render(request,'reg_form.html')
 
@@ -91,5 +91,22 @@ def fertilizer(request):
 def discuss(request):
 	if request.user.is_authenticated():
 		return render(request,'discuss.html')
+	else:
+		return redirect('/login/')
+
+
+def discuss(request):
+	if request.user.is_authenticated():
+		return render(request,'discuss.html')
+	else:
+		return redirect('/login/')
+
+
+def disease(request):
+	if request.user.is_authenticated():
+		if request.method == 'POST':
+			return HttpResponse("asdfasdf")
+		else:
+			return render(request,'disease.html')
 	else:
 		return redirect('/login/')

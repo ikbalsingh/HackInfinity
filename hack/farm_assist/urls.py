@@ -9,5 +9,6 @@ urlpatterns = [
     url(r'^seeds/', views.seeds),
     url(r'^fert/', views.fertilizer),
     url(r'^discuss/', views.discuss),
+    url(r'^disease/', views.disease),
 
 ]
