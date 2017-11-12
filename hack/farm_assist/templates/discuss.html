@@ -1,0 +1,18 @@
+{% load disqus_tags %}
+{% disqus_dev %}
+<script type="text/javascript">
+	var disqus_developer = 1;
+	var disqus_url = 'http://arthurkoziel.com/';
+</script>
+<div class="col s12 comments "> 
+	<div id="disqus_thread"></div>
+</div>
+<script>
+
+	(function() { 
+		var d = document, s = d.createElement('script');
+		s.src = 'https://farmassist.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>

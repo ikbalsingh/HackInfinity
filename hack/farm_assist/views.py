@@ -29,7 +29,7 @@ def login_site(request):
 			login(request, user)
 			return redirect('/farmer_homepage/')
 		else:
-			return redirect('/register/')
+			return redirect('/login/')
 
 	else:	
 		return render(request, 'login.html')
@@ -84,5 +84,12 @@ def seeds(request):
 def fertilizer(request):
 	if request.user.is_authenticated():
 		return render(request,'fert.html')
+	else:
+		return redirect('/login/')
+
+
+def discuss(request):
+	if request.user.is_authenticated():
+		return render(request,'discuss.html')
 	else:
 		return redirect('/login/')

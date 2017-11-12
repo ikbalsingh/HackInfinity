@@ -8,5 +8,6 @@ urlpatterns = [
     url(r'^farmer_homepage/', views.farmer_homepage),
     url(r'^seeds/', views.seeds),
     url(r'^fert/', views.fertilizer),
+    url(r'^discuss/', views.discuss),
 
 ]

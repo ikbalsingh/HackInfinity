@@ -37,8 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
     'farm_assist',
+    'disqus',
 ]
+SITE_ID=1
+DISQUS_API_KEY = 'FOOBARFOOBARFOOBARFOOBARFOOBARF'
+DISQUS_WEBSITE_SHORTNAME = 'foobar'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
